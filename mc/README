@@ -1,0 +1,16 @@
+Midnight Commander (mc)
+visual, dual-pane file manager
+  https://midnight-commander.org/
+  https://github.com/MidnightCommander/
+
+mcedit
+embedded full-featured text editor with syntax highlighting support
+
+-------------------------------------------------------------
+Resources location
+
+system's mcedit syntax highlighting files are placed in dir:
+  /usr/share/mc/syntax
+
+user's mcedit syntax highlighting files are placed in dir:
+  ~/.local/share/mc/syntax
