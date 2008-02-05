@@ -1,0 +1,36 @@
+Kate
+text editor
+  https://kate-editor.org/
+
+Syntax Highlighting Engine
+  https://invent.kde.org/frameworks/syntax-highlighting
+
+How to contribute:
+- just send the file to the KWrite-Devel mailing list
+  kwrite-devel@kde.org for review
+  needed thing: it must be licensed under LGPL for example
+- or submit it to the KDE Bugtracking System:
+  https://bugs.kde.org/enter_bug.cgi?product=frameworks-syntax-highlighting
+
+-------------------------------------------------------------
+Resources location
+
+system's Kate syntax highlighting files are inside file:
+  /usr/lib64/libKF5SyntaxHighlighting.so.5.45.0
+
+user's Kate syntax highlighting files are placed into dir:
+  ~/.local/share/org.kde.syntax-highlighting/syntax
+
+-------------------------------------------------------------
+Useful commands
+
+to validate every XML file by using the command
+  validatehl.sh yourSyntax.xml
+accompanying files can be taken from:
+  https://invent.kde.org/frameworks/syntax-highlighting/data/schema
+
+to get paths where Qt stores a data:
+  qtpaths --paths GenericDataLocation
+
+to display the style or others informations associated with each part of text
+  ksyntaxhighlighter6 --output-format=ansi --syntax-trace=format test.ijs
