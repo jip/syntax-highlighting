@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE language SYSTEM "language.dtd">
 <!--
-  j.xml syntax highlighting for J programming languase under Kate
+  j.xml syntax highlighting for J programming language under Kate
 
   J is a modern, high-level, general-purpose, high-performance, portable programming language.
   http://www.jsoftware.com
-  
+
   Kate is a KDE Advanced Text Editor
   http://kate.kde.org/
   -->
-<language name="J" version="1.0" kateversion="2.3" section="Sources" extensions="*.ijs;*IJS;*.ijx;*.IJX;*.ijt;*.IJT;*.ijl;*.IJL" author="Igor Zhuravlov (|.'ur.ugvd.ciu@rogi')" license="GPL">
+<language name="J" version="1.0" kateversion="2.4" section="Sources" extensions="*.ijs;*IJS;*.ijx;*.IJX;*.ijt;*.IJT;*.ijl;*.IJL" author="Igor Zhuravlov (|.'ur.ugvd.ciu@rogi')" license="GPL">
 	<highlighting>
 	<list name="keywords">
 		<item> assert. </item>
