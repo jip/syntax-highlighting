@@ -1,3 +1,10 @@
+2012-01-01
+
+J syntax for Kate, version 1.0
+- use entities
+- redefine keywords
+- parts-of-speech are more fine-grained now
+
 2009-08-07
 
 J syntax for mc
