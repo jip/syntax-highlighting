@@ -1,3 +1,10 @@
+2012-03-21
+
+J syntax for Kate, version 1.0a
+- employ entities instead regexes
+- separate out color schemes to Kate/J.*.katehlcolor files
+- add test and demo
+
 2012-01-01
 
 J syntax for Kate, version 1.0

@@ -1,0 +1,19 @@
+[Highlighting J - Schema kate - Printing]
+J:Adverb=1,ff000000,ffffffff,1,0,0,0,,,,---
+J:Comment=8,ff808080,ffa5c1e4,0,1,0,0,,,,---
+J:Conjunction=1,ff000000,ffffffff,1,0,0,0,,,,---
+J:Control=1,ff000000,ffffffff,0,0,0,0,,,,---
+J:Copulae Global=1,ff000000,ffffffff,1,0,0,0,,,,---
+J:Copulae Local=1,ff000000,ffffffff,0,0,0,0,,,,---
+J:ExpArg=1,ff000000,ffffffff,1,1,0,0,,,,---
+J:Noun=1,ff000000,ffffffff,1,0,0,0,,,,---
+J:Number=3,ff000000,ffffdd00,0,0,0,0,,,,---
+J:Parens=12,ff000000,ff00316e,0,0,0,0,ffe0e9f8,,,---
+J:Sentence=0,ff000000,ffffffff,0,0,0,0,,,,---
+J:String=7,ff000000,ff9c0e0e,0,0,0,0,,,,---
+J:Verb=1,ff000000,ffffffff,1,0,0,0,,,,---
+
+[KateHLColors]
+full schema=false
+highlight=J
+schema=kate - Printing

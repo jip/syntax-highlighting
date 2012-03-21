@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE language SYSTEM "language.dtd" [
+<!DOCTYPE language SYSTEM "language.dtd"
+[
   <!ENTITY unum "\d+">                                 <!-- Unsigned integer number -->
   <!ENTITY anum "[a-z\d]+">                            <!-- Non-10-based unsigned integer number, e.g. 1a -->
   <!ENTITY bnum "\b&unum;b_?&anum;(\.&anum;)\b">       <!-- Based integer number, e.g. 36b_1a.z2 -->
@@ -29,13 +30,13 @@
       <context attribute="Sentence" lineEndContext="#stay" name="sentence">
         <DetectSpaces/>
         <StringDetect attribute="Comment" context="comment" String="NB."/>
-        <RegExpr attribute="String" context="#stay" String="'([^']|'')*'"/>
+        <RegExpr attribute="String" context="#stay" String="&apos;([^&apos;]|&apos;&apos;)*&apos;"/>
         <RegExpr attribute="Adverb" context="#stay" String="([/\\bfMt]\.|t:|[~/\\}])(?![.:])"/>
         <RegExpr attribute="Verb" context="#stay" String="(_?\d:|p\.\.|[ACeEIjLor]\.|[_/\\iqsux]:|\{::|[=!\]]|[-&lt;&gt;+*%$|,#{][.:]?|[;[]:?|[~}&quot;ip][.:]|[?^]\.?)(?![.:])"/>
-        <RegExpr attribute="Number" context="#stay" String="\b\d+b_?[a-z\d]+(\.[a-z\d]+)\b|\b_?\d+x\b|\b_?\d+r_?\d+\b|\b(_?\d+(\.\d+)?(e\d+)?|_?_|_\.)((j|a[dr])(_?\d+(\.\d+)?(e\d+)?|_?_|_\.))?([px](_?\d+(\.\d+)?(e\d+)?|_?_|_\.)((j|a[dr])(_?\d+(\.\d+)?(e\d+)?|_?_|_\.))?)?(?![a-z\d_.])"/>
+        <RegExpr attribute="Number" context="#stay" String="&bnum;|&xnum;|&rnum;|&pnum;"/>
         <AnyChar attribute="Parens" context="#stay" String="()"/>
         <RegExpr attribute="Conjunction" context="#stay" String="(&quot;|[@&amp;][.:]?|[.:][.:]?|[!D][.:]|&amp;\.:|[;dHT]\.|`:?|[LS^]:)(?![.:])"/>
-        <RegExpr attribute="Control" context="#stay" String="\b(assert|break|f?case|catch[dt]?|continue|do|else(if)?|end|for(_[a-zA-Z][a-zA-Z\d_]*)?|(goto|label)_[a-zA-Z][a-zA-Z\d_]*|if|return|select|throw|try|whil(e|st))\.(?![.:])"/>
+        <RegExpr attribute="Control" context="#stay" String="\b(assert|break|f?case|catch[dt]?|continue|do|else(if)?|end|for(_&name;)?|(goto|label)_&name;|if|return|select|throw|try|whil(e|st))\.(?![.:])"/>
         <Detect2Chars attribute="Copulae Global" context="#stay" char="=" char1=":"/>
         <Detect2Chars attribute="Copulae Local" context="#stay" char="=" char1="."/>
         <RegExpr attribute="ExpArg" context="#stay" String="\b[nmuvxy]\.?(?![\w:])"/>
