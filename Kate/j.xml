@@ -8,8 +8,8 @@
   <!ENTITY xnum "\b&inum;x\b">                         <!-- Extended precision integer number, e.g. _123x -->
   <!ENTITY rnum "\b&inum;r&inum;\b">                   <!-- Rational number, e.g. _1r23 -->
   <!ENTITY fnum "&inum;(\.&unum;)?">                   <!-- Floating point number, e.g. 1.23 -->
-  <!ENTITY enum "(&fnum;(e&unum;)?|_?_|_\.)">          <!-- Exponential (scientific) notation, e.g. 1.2e3 -->
-  <!ENTITY cnum "&enum;((j|a[dr])&enum;)?">            <!-- Complex number, e.g. 1.2e3j4.5e6 -->
+  <!ENTITY enum "(&fnum;(e&inum;)?|_?_|_\.)">          <!-- Exponential (scientific) notation, e.g. 1.2e_3 -->
+  <!ENTITY cnum "&enum;((j|a[dr])&enum;)?">            <!-- Complex number, e.g. 1.2e3j4.5e_6 -->
   <!ENTITY pnum "\b&cnum;([px]&cnum;)?(?![a-z\d_.])">  <!-- Number based on pi or on e, e.g. 1j2p3j4 -->
   <!ENTITY name "[a-zA-Z][a-zA-Z\d_]*">                <!-- Name -->
   <!ENTITY lname "\b&name;_(&name;)?_\b">              <!-- Locative, a__ means a_base_ -->
@@ -24,7 +24,7 @@
   Kate is a KDE Advanced Text Editor
   http://kate.kde.org/
 -->
-<language name="J" section="Scripts" version="1.0" kateversion="2.4" extensions="*.ijs;*.IJS" mimetype="text/x-j;text/x-jsrc" author="Igor Zhuravlov (zhuravlov.ip@it.dvfu.ru)" indenter="normal" license="GPL">
+<language name="J" section="Scripts" version="1.1" kateversion="2.4" extensions="*.ijs;*.IJS" mimetype="text/x-j;text/x-jsrc" author="Igor Zhuravlov (zhuravlov.ip@it.dvfu.ru)" indenter="normal" license="GPL">
   <highlighting>
     <contexts>
       <context attribute="Sentence" lineEndContext="#stay" name="sentence">
