@@ -10,7 +10,7 @@
   <!ENTITY fnum "&inum;(\.&unum;)?">                   <!-- Floating point number, e.g. 1.23 -->
   <!ENTITY enum "(&fnum;(e&inum;)?|_?_|_\.)">          <!-- Exponential (scientific) notation, e.g. 1.2e_3 -->
   <!ENTITY cnum "&enum;((j|a[dr])&enum;)?">            <!-- Complex number, e.g. 1.2e3j4.5e_6 -->
-  <!ENTITY pnum "\b&cnum;([px]&cnum;)?(?![a-z\d_.])">  <!-- Number based on pi or on e, e.g. 1j2p3j4 -->
+  <!ENTITY pnum "\b&cnum;([px]&cnum;)?(?![a-z\d_.])">  <!-- Number based on pi or e, e.g. 1j2p3j4 -->
   <!ENTITY name "[a-zA-Z][a-zA-Z\d_]*">                <!-- Name -->
   <!ENTITY lname "\b&name;_(&name;)?_\b">              <!-- Locative, a__ means a_base_ -->
   <!ENTITY ilname "\b&name;__&name;\b">                <!-- Indirect locative -->
@@ -24,15 +24,15 @@
   Kate is a KDE Advanced Text Editor
   http://kate.kde.org/
 -->
-<language name="J" section="Scripts" version="1.1" kateversion="2.4" extensions="*.ijs;*.IJS" mimetype="text/x-j;text/x-jsrc" author="Igor Zhuravlov (zhuravlov.ip@ya.ru)" indenter="normal" license="GPL">
+<language name="J" section="Scripts" version="1.2" kateversion="2.4" extensions="*.ijs;*.IJS" mimetype="text/x-j;text/x-jsrc" author="Igor Zhuravlov (zhuravlov.ip@ya.ru)" indenter="normal" license="GPL">
   <highlighting>
     <contexts>
       <context attribute="Sentence" lineEndContext="#stay" name="sentence">
         <DetectSpaces/>
         <StringDetect attribute="Comment" context="comment" String="NB."/>
         <RegExpr attribute="String" context="#stay" String="&apos;([^&apos;]|&apos;&apos;)*&apos;"/>
-        <RegExpr attribute="Adverb" context="#stay" String="([/\\bfMt]\.|t:|[~/\\}])(?![.:])"/>
-        <RegExpr attribute="Verb" context="#stay" String="(_?\d:|p\.\.|[ACeEIjLor]\.|[_/\\iqsux]:|\{::|[=!\]]|[-&lt;&gt;+*%$|,#{][.:]?|[;[]:?|[~}&quot;ip][.:]|[?^]\.?)(?![.:])"/>
+        <RegExpr attribute="Adverb" context="#stay" String="([/\\]\.|\b[bfMt]\.|\bt:|[~/\\}])(?![.:])"/>
+        <RegExpr attribute="Verb" context="#stay" String="(_?\d:|p\.\.|[ACeEIjLor]\.|[_/\\iqsux]:|\{::|[=!\]]|[-&lt;&gt;+*%$|,#\{][.:]?|[;\[]:?|[~}&quot;ip][.:]|[?^]\.?)(?![.:])"/>
         <RegExpr attribute="Number" context="#stay" String="&bnum;|&xnum;|&rnum;|&pnum;"/>
         <AnyChar attribute="Parens" context="#stay" String="()"/>
         <RegExpr attribute="Conjunction" context="#stay" String="(&quot;|[@&amp;][.:]?|[.:][.:]?|[!D][.:]|&amp;\.:|[;dHT]\.|`:?|[LS^]:)(?![.:])"/>

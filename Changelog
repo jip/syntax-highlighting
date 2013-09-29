@@ -1,3 +1,10 @@
+2013-09-29
+
+J syntax for Kate, version 1.2
+- fix Adverb regexp's pattern
+- fix Verb regexp's pattern
+- bump version from "1.1" to "1.2"
+
 2013-03-18
 
 J syntax for Kate, version 1.1
