@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding='Windows-1251'?>
+<!DOCTYPE hrc PUBLIC "-//Cail Lomecb//DTD Colorer HRC take5//EN"
+  "http://colorer.sf.net/2003/hrc.dtd">
+<hrc version="take5" xmlns="http://colorer.sf.net/2003/hrc"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://colorer.sf.net/2003/hrc http://colorer.sf.net/2003/hrc.xsd">
+
+  <type name="j">
+    <annotation>
+      <documentation><![CDATA[
+        J language syntax for Far Manager
+        http://www.jsoftware.com/jwiki/Guides/Syntax%20Coloring
+        Version: 1.0
+        Date: 2013-09-29
+      ]]></documentation>
+      <contributors><![CDATA[
+        Igor Zhuravlov <zhuravlov.ip@ya.ru>
+      ]]></contributors>
+    </annotation>
+
+    <import type="def"/>
+
+    <entity name='unum' value='\d+'/>                                 <!-- Unsigned integer number -->
+    <entity name='anum' value='[a-z\d]+'/>                            <!-- Non-10-based unsigned integer number, e.g. 1a -->
+    <entity name='bnum' value='\b%unum;b_?%anum;(\.%anum;)\b'/>       <!-- Based integer number, e.g. 36b_1a.z2 -->
+    <entity name='inum' value='_?%unum;'/>                            <!-- Integer number -->
+    <entity name='xnum' value='\b%inum;x\b'/>                         <!-- Extended precision integer number, e.g. _123x -->
+    <entity name='rnum' value='\b%inum;r%inum;\b'/>                   <!-- Rational number, e.g. _1r23 -->
+    <entity name='fnum' value='%inum;(\.%unum;)?'/>                   <!-- Floating point number, e.g. 1.23 -->
+    <entity name='enum' value='(%fnum;(e%inum;)?|_?_|_\.)'/>          <!-- Exponential (scientific) notation, e.g. 1.2e_3 -->
+    <entity name='cnum' value='%enum;((j|a[dr])%enum;)?'/>            <!-- Complex number, e.g. 1.2e3j4.5e_6 -->
+    <entity name='pnum' value='\b%cnum;([px]%cnum;)?([a-z\d_.])?!'/>  <!-- Number based on pi or e, e.g. 1j2p3j4 -->
+    <entity name='name' value='[a-zA-Z][a-zA-Z\d_]*'/>                <!-- Name -->
+    <entity name='lname' value='\b%name;_(%name;)?_\b'/>              <!-- Locative, a__ means a_base_ -->
+    <entity name='ilname' value='\b%name;__%name;\b'/>                <!-- Indirect locative -->                             
+
+    <region name='Adverb'        parent='def:Symbol'/>
+    <region name='Comment'       parent='def:Comment'/>
+    <region name='Conjunction'   parent='def:Symbol'/>
+    <region name='Control'       parent='def:Keyword'/>
+    <region name='CopulaeGlobal' parent='def:Symbol'/>
+    <region name='CopulaeLocal'  parent='def:Symbol'/>
+    <region name='ExpArg'        parent='def:Parameter'/>
+    <region name='Noun'          parent='def:Var'/>
+    <region name='Number'        parent='def:Number'/>
+    <region name='Parens'        parent='def:Symbol'/>
+    <region name='String'        parent='def:String'/>
+    <region name='Verb'          parent='def:Operator'/>
+
+    <scheme name="j">
+      <block start="/NB\./" end="/$/" scheme="Comment" region="Comment"/>
+      <regexp match="/&apos;([^&apos;]|&apos;&apos;)*&apos;/" region0="String"/>
+      <regexp match="/([/\\]\.|\b[bfMt]\.|\bt:|[~/\\}])([.:])?!/" region0="Adverb"/>
+      <regexp match="/(_?\d:|p\.\.|[ACeEIjLor]\.|[_/\\iqsux]:|\{::|[=!\]]|[-&lt;&gt;+*%$|,#\{][.:]?|[;\[]:?|[~}&quot;ip][.:]|[?^]\.?)([.:])?!/" region0="Verb"/>
+      <regexp match="/%bnum;|%xnum;|%rnum;|%pnum;/" region0="Number"/>
+      <regexp match="/(&quot;|[@&amp;][.:]?|[.:][.:]?|[!D][.:]|&amp;\.:|[;dHT]\.|`:?|[LS^]:)([.:])?!/" region0="Conjunction"/>
+      <regexp match="/\b(assert|break|f?case|catch[dt]?|continue|do|else(if)?|end|for(_%name;)?|(goto|label)_%name;|if|return|select|throw|try|whil(e|st))\.([.:])?!/" region0="Control"/>
+      <regexp match="/=:/" region0="CopulaeGlobal"/>
+      <regexp match="/=\./" region0="CopulaeLocal"/>
+      <regexp match="/\b[nmuvxy]\.?([\w:])?!/" region0="ExpArg"/>
+      <regexp match="/\ba[.:]([.:])?!/" region0="Noun"/>
+      <block start="/(\()/" end="/(\))/" scheme="j" region00="Parens" region01="def:PairStart" region10="Parens" region11="def:PairEnd"/>
+    </scheme>
+  </type>
+</hrc>
+<!-- ***** BEGIN LICENSE BLOCK *****
+   - Version: MPL 1.1/GPL 2.0/LGPL 2.1
+   -
+   - The contents of this file are subject to the Mozilla Public License Version
+   - 1.1 (the "License"); you may not use this file except in compliance with
+   - the License. You may obtain a copy of the License at
+   - http://www.mozilla.org/MPL/
+   -
+   - Software distributed under the License is distributed on an "AS IS" basis,
+   - WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+   - for the specific language governing rights and limitations under the
+   - License.
+   -
+   - The Original Code is the Colorer Library.
+   -
+   - The Initial Developer of the Original Code is
+   - Cail Lomecb <cail@nm.ru>.
+   - Portions created by the Initial Developer are Copyright (C) 1999-2005
+   - the Initial Developer. All Rights Reserved.
+   -
+   - Contributor(s):
+   -   Igor Zhuravlov
+   -
+   - Alternatively, the contents of this file may be used under the terms of
+   - either the GNU General Public License Version 2 or later (the "GPL"), or
+   - the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
+   - in which case the provisions of the GPL or the LGPL are applicable instead
+   - of those above. If you wish to allow use of your version of this file only
+   - under the terms of either the GPL or the LGPL, and not to allow others to
+   - use your version of this file under the terms of the MPL, indicate your
+   - decision by deleting the provisions above and replace them with the notice
+   - and other provisions required by the LGPL or the GPL. If you do not delete
+   - the provisions above, a recipient may use your version of this file under
+   - the terms of any one of the MPL, the GPL or the LGPL.
+   -
+   - ***** END LICENSE BLOCK ***** -->

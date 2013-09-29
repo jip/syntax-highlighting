@@ -1,0 +1,17 @@
+Far Manager
+files and archives manager in Windows operating systems
+  https://farmanager.com/
+  https://github.com/FarGroup/FarManager
+
+Colorer Library
+a syntax highlighting and text parsing library
+  https://github.com/colorer
+
+Syntax and color schemes for colorer library
+  https://github.com/colorer/Colorer-schemes
+
+-------------------------------------------------------------
+Resources location
+
+system's Far Manager syntax highlighting files are placed into dir:
+  C:\Program Files\Far Manager\Plugins\FarColorer\base\hrc\auto
