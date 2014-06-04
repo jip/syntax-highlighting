@@ -10,8 +10,8 @@
       <documentation><![CDATA[
         J language syntax for Far Manager
         http://www.jsoftware.com/jwiki/Guides/Syntax%20Coloring
-        Version: 1.0
-        Date: 2013-09-29
+        Version: 1.0.1
+        Date: 2014-06-04
       ]]></documentation>
       <contributors><![CDATA[
         Igor Zhuravlov <zhuravlov.ip@ya.ru>
@@ -32,7 +32,7 @@
     <entity name='pnum' value='\b%cnum;([px]%cnum;)?([a-z\d_.])?!'/>  <!-- Number based on pi or e, e.g. 1j2p3j4 -->
     <entity name='name' value='[a-zA-Z][a-zA-Z\d_]*'/>                <!-- Name -->
     <entity name='lname' value='\b%name;_(%name;)?_\b'/>              <!-- Locative, a__ means a_base_ -->
-    <entity name='ilname' value='\b%name;__%name;\b'/>                <!-- Indirect locative -->                             
+    <entity name='ilname' value='\b%name;__%name;\b'/>                <!-- Indirect locative -->
 
     <region name='Adverb'        parent='def:Symbol'/>
     <region name='Comment'       parent='def:Comment'/>
