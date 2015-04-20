@@ -1,3 +1,15 @@
+2015-04-20
+
+J syntax for Kate, version 1.4
+- merge versions 1.2 and 1.3
+- remove not used def and defc entities
+- approach color scheme to JQt
+- drop ExpArg: n. m. u. v. x. y.
+- reformat a bit
+- bump version from "1.3" to "1.4"
+- separate out color scheme to Kate/J.normal.katehlcolor file
+- update a test and demo
+
 2014-06-04
 
 J syntax for Far, version 1.0.1

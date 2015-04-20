@@ -1,6 +1,8 @@
 Comment
-NB. This is a comment
-NB. +/ &.: > 'This is a quoted text inside comment'
+NB. This is a single line comment, check regions overlapping priority: 1 2.3  +/ &. 'quoted text'
+NB.(
+NB. This is a foldable multi line comment
+NB.)
 
 String literal
 ''
@@ -46,4 +48,14 @@ Combined
 for_abc. i. 5 do. 55 return. end.
 a=. b =: 123 +/ # i. 10
 123 'qwerty'
-abc_123 def_456 =: '123'
+a_b =: '123' [ c__d =. 4 : 0  NB. foldable definition begins
+  x +/ y
+)
+e__12 =: define  NB. foldable definition begins
+  if. x do.  NB. inner foldable region begins
+    y=. y + x  NB. comment after code
+    x +/ y
+  else.  NB. inner foldable region begins
+    y +/ y
+  end.
+)
