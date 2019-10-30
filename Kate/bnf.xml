@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+Changes:
+
+Version 1.0 (2019-10-28) by Igor Zhuravlov
+- initial release
+
+-->
+<!DOCTYPE language SYSTEM "language.dtd">
+<!--
+  bnf.xml syntax highlighting for Backus-Naur form under Kate
+
+  Backus-Naur form or Backus normal form (BNF) is a notation technique for context-free grammars
+
+  Kate is a KDE Advanced Text Editor
+  http://kate.kde.org/
+-->
+<language name="BNF"
+          section="Sources"
+          version="1"
+          kateversion="5.0"
+          extensions="*.bnf;*.BNF"
+          mimetype="text/x-bnf"
+          author="Igor Zhuravlov (zhuravlov.ip@ya.ru)"
+          indenter="normal"
+          license="GPL">
+  <highlighting>
+    <contexts>
+      <context attribute="Normal Text" lineEndContext="#stay" name="Normal">
+        <DetectSpaces/>
+        <DetectChar       attribute="String"      context="String"       char="&apos;"/>
+        <DetectIdentifier attribute="Nonterminal" context="#stay"/>
+        <RegExpr          attribute="Nonterminal" context="#stay"        String="\w+|&lt;[\w ]+&gt;"/>
+        <StringDetect     attribute="Copulae"     context="#stay"        String="::=" insensitive="true"/>
+        <Detect2Chars     attribute="Copulae"     context="#stay"        char=":" char1="="/>
+        <Detect2Chars     attribute="Copulae"     context="#stay"        char="-" char1="&gt;"/>
+        <Detect2Chars     attribute="Copulae"     context="#stay"        char="&lt;" char1="-"/>
+        <AnyChar          attribute="Operator"    context="#stay"        String="|&amp;^"/>
+        <DetectChar       attribute="Comment"     context="comment line" char="#"/>
+      </context>
+      <context attribute="String" lineEndContext="#pop" name="String">
+        <LineContinue attribute="String" context="#stay"/>
+        <HlCStringChar attribute="String Char" context="#stay"/>
+        <DetectChar attribute="String" context="#pop" char="&apos;"/>
+      </context>
+      <context attribute="Comment" lineEndContext="#pop" name="comment line"/>
+    </contexts>
+    <itemDatas>
+      <itemData name="Normal Text" defStyleNum="dsNormal"/>
+      <itemData name="String"      defStyleNum="dsString"/>
+      <itemData name="String Char" defStyleNum="dsSpecialChar"/>
+      <itemData name="Nonterminal" defStyleNum="dsNormal"/>
+      <itemData name="Copulae"     defStyleNum="dsOperator" bold="true"/>
+      <itemData name="Operator"    defStyleNum="dsOperator" bold="true"/>
+      <itemData name="Comment"     defStyleNum="dsComment" spellChecking="true"/>
+    </itemDatas>
+  </highlighting>
+</language>
