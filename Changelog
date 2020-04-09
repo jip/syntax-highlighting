@@ -1,3 +1,9 @@
+2020-04-09
+
+J syntax for Kate, version 3
+- sync with J9: remove primitives .. .: d. D. D: t. t: T.
+- bump version from "2" to "3"
+
 2019-10-28
 
 BNF syntax for Kate, version 1.0
