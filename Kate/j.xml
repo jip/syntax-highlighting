@@ -3,12 +3,6 @@
 
 Changes:
 
-Version 3 (2020-04-09) by Igor Zhuravlov
-- sync with J9: primitives .. .: d. D. D: t. t: T. removed
-
-Version 2 (2016-09-25) by Volker Krause
-- language/@version upgraded from "1.4" to "2"
-
 Version 1.5 (2015-04-29) by Igor Zhuravlov
 - language/@kateversion upgraded from "2.4" to "3.4"
 
@@ -85,18 +79,22 @@ Version 1.0 (2012-03-21) by Igor Zhuravlov
         <StringDetect attribute="Comment"        context="#stay"        String="NB.)" endRegion="Fold"/>
         <StringDetect attribute="Comment"        context="comment line" String="NB."/>
         <RegExpr      attribute="String"         context="#stay"        String="&apos;([^&apos;]|&apos;&apos;)*&apos;"/>
-        <RegExpr      attribute="Adverb"         context="#stay"        String="([/\\]\.|\b[bfM]\.|[~/\\}])(?![.:])"/>
+        <RegExpr      attribute="Adverb"         context="#stay"        String="([/\\]\.|\b[bfMt]\.|\bt:|[~/\\}])(?![.:])"/>
         <RegExpr      attribute="Verb"           context="#stay"        String="(_?\d:|p\.\.|[ACeEIjLor]\.|[_/\\iqsux]:|\{::|[=!\]]|[-&lt;&gt;+*%$|,#\{][.:]?|[;\[]:?|[~}&quot;ip][.:]|[?^]\.?)(?![.:])"/>
         <RegExpr      attribute="Number"         context="#stay"        String="&bnum;|&xnum;|&rnum;|&pnum;"/>
         <AnyChar      attribute="Parens"         context="#stay"        String="()"/>
-        <RegExpr      attribute="Conjunction"    context="#stay"        String="(&quot;|[@&amp;][.:]?|:[.:]?|![.:]|&amp;\.:|[;H]\.|`:?|[LS^]:)(?![.:])"/>
+        <RegExpr      attribute="Conjunction"    context="#stay"        String="(&quot;|[@&amp;][.:]?|[.:][.:]?|[!D][.:]|&amp;\.:|[;dHT]\.|`:?|[LS^]:)(?![.:])"/>
         <RegExpr      attribute="Control"        context="#stay"        String="\b(assert|break|f?case|catch[dt]?|continue|do|else(if)?|end|for(_&name;)?|(goto|label)_&name;|if|return|select|throw|try|whil(e|st))\.(?![.:])"/>
         <Detect2Chars attribute="Copulae Global" context="#stay"        char="=" char1=":"/>
         <Detect2Chars attribute="Copulae Local"  context="#stay"        char="=" char1="."/>
         <RegExpr      attribute="ExpArg"         context="#stay"        String="\b[nmuvxy](?![\w:.])"/>
         <RegExpr      attribute="Noun"           context="#stay"        String="\ba[.:](?![.:])"/>
       </context>
-      <context attribute="Comment" lineEndContext="#pop" name="comment line"/>
+      <context attribute="Comment" lineEndContext="#pop" name="comment line">
+        <DetectSpaces />
+        <IncludeRules context="##Alerts"/>
+        <IncludeRules context="##Modelines"/>
+      </context>
     </contexts>
     <itemDatas>
       <itemData name="Sentence"       defStyleNum="dsNormal"/>
@@ -123,3 +121,4 @@ Version 1.0 (2012-03-21) by Igor Zhuravlov
     <folding indentationsensitive="true"/>
   </general>
 </language>
+<!-- kate: replace-tabs on; indent-width 2; -->
