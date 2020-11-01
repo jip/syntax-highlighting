@@ -1,3 +1,9 @@
+2020-11-01
+
+J syntax for Kate, version 4, author Alex Turbov
+- Feature: Replace Alerts w/ Special-Comments syntax and remove Modelines
+- bump version from "3" to "4"
+
 2020-08-17
 
 J syntax for Kate, version 3.1, author Nibaldo González
