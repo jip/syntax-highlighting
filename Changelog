@@ -1,3 +1,9 @@
+2020-11-30
+
+J syntax for Kate, version 4.1, author jonathan poelen
+- indexer: fix some issues
+- upgrade language/@kateversion from "3.4" to "5.0"
+
 2020-11-01
 
 J syntax for Kate, version 4, author Alex Turbov
