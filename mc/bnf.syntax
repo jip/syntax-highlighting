@@ -1,0 +1,44 @@
+# BNF family (BNF, EBNF, ABNF, WBNF etc.) syntax highlighting
+
+context default
+    keyword ::= white
+    keyword := white
+    keyword : white
+    keyword = white
+    keyword <- white
+    keyword -> white
+    keyword <= white
+    keyword => white
+    keyword ← white
+    keyword → white
+    keyword ⇐ white
+    keyword ⇒ white
+    keyword (\* green
+    keyword \*) green
+    keyword | yellow
+    keyword \* yellow
+    keyword \+ yellow
+    keyword ? yellow
+    keyword ( yellow
+    keyword ) yellow
+    keyword < yellow
+    keyword > yellow
+    keyword [ yellow
+    keyword ] yellow
+    keyword { yellow
+    keyword } yellow
+    keyword , yellow
+    keyword ; yellow
+    keyword ` brightred
+    keyword '\\'' brightcyan
+    keyword "\\"" brightcyan
+
+context ' ' brightcyan
+
+context " " brightcyan
+
+context # \n green
+    spellcheck
+
+context exclusive (\* \*) green
+    spellcheck
