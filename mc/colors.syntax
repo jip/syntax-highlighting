@@ -1,307 +1,326 @@
+wholechars abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789[]
 context default
-context exclusive whole BKBK1 BKBK2 black black
-context exclusive whole BKGY1 BKGY2 black gray
-context exclusive whole BKRE1 BKRE2 black red
-context exclusive whole BKBR1 BKBR2 black brightred
-context exclusive whole BKGR1 BKGR2 black green
-context exclusive whole BKBG1 BKBG2 black brightgreen
-context exclusive whole BKBN1 BKBN2 black brown
-context exclusive whole BKYE1 BKYE2 black yellow
-context exclusive whole BKBU1 BKBU2 black blue
-context exclusive whole BKBB1 BKBB2 black brightblue
-context exclusive whole BKMA1 BKMA2 black magenta
-context exclusive whole BKBM1 BKBM2 black brightmagenta
-context exclusive whole BKCY1 BKCY2 black cyan
-context exclusive whole BKBC1 BKBC2 black brightcyan
-context exclusive whole BKLG1 BKLG2 black lightgray
-context exclusive whole BKWH1 BKWH2 black white
-context exclusive whole BKDF1 BKDF2 black default
-context exclusive whole BKBS1 BKBS2 black base
-context exclusive whole GYBK1 GYBK2 gray black
-context exclusive whole GYGY1 GYGY2 gray gray
-context exclusive whole GYRE1 GYRE2 gray red
-context exclusive whole GYBR1 GYBR2 gray brightred
-context exclusive whole GYGR1 GYGR2 gray green
-context exclusive whole GYBG1 GYBG2 gray brightgreen
-context exclusive whole GYBN1 GYBN2 gray brown
-context exclusive whole GYYE1 GYYE2 gray yellow
-context exclusive whole GYBU1 GYBU2 gray blue
-context exclusive whole GYBB1 GYBB2 gray brightblue
-context exclusive whole GYMA1 GYMA2 gray magenta
-context exclusive whole GYBM1 GYBM2 gray brightmagenta
-context exclusive whole GYCY1 GYCY2 gray cyan
-context exclusive whole GYBC1 GYBC2 gray brightcyan
-context exclusive whole GYLG1 GYLG2 gray lightgray
-context exclusive whole GYWH1 GYWH2 gray white
-context exclusive whole GYDF1 GYDF2 gray default
-context exclusive whole GYBS1 GYBS2 gray base
-context exclusive whole REBK1 REBK2 red black
-context exclusive whole REGY1 REGY2 red gray
-context exclusive whole RERE1 RERE2 red red
-context exclusive whole REBR1 REBR2 red brightred
-context exclusive whole REGR1 REGR2 red green
-context exclusive whole REBG1 REBG2 red brightgreen
-context exclusive whole REBN1 REBN2 red brown
-context exclusive whole REYE1 REYE2 red yellow
-context exclusive whole REBU1 REBU2 red blue
-context exclusive whole REBB1 REBB2 red brightblue
-context exclusive whole REMA1 REMA2 red magenta
-context exclusive whole REBM1 REBM2 red brightmagenta
-context exclusive whole RECY1 RECY2 red cyan
-context exclusive whole REBC1 REBC2 red brightcyan
-context exclusive whole RELG1 RELG2 red lightgray
-context exclusive whole REWH1 REWH2 red white
-context exclusive whole REDF1 REDF2 red default
-context exclusive whole REBS1 REBS2 red base
-context exclusive whole BRBK1 BRBK2 brightred black
-context exclusive whole BRGY1 BRGY2 brightred gray
-context exclusive whole BRRE1 BRRE2 brightred red
-context exclusive whole BRBR1 BRBR2 brightred brightred
-context exclusive whole BRGR1 BRGR2 brightred green
-context exclusive whole BRBG1 BRBG2 brightred brightgreen
-context exclusive whole BRBN1 BRBN2 brightred brown
-context exclusive whole BRYE1 BRYE2 brightred yellow
-context exclusive whole BRBU1 BRBU2 brightred blue
-context exclusive whole BRBB1 BRBB2 brightred brightblue
-context exclusive whole BRMA1 BRMA2 brightred magenta
-context exclusive whole BRBM1 BRBM2 brightred brightmagenta
-context exclusive whole BRCY1 BRCY2 brightred cyan
-context exclusive whole BRBC1 BRBC2 brightred brightcyan
-context exclusive whole BRLG1 BRLG2 brightred lightgray
-context exclusive whole BRWH1 BRWH2 brightred white
-context exclusive whole BRDF1 BRDF2 brightred default
-context exclusive whole BRBS1 BRBS2 brightred base
-context exclusive whole GRBK1 GRBK2 green black
-context exclusive whole GRGY1 GRGY2 green gray
-context exclusive whole GRRE1 GRRE2 green red
-context exclusive whole GRBR1 GRBR2 green brightred
-context exclusive whole GRGR1 GRGR2 green green
-context exclusive whole GRBG1 GRBG2 green brightgreen
-context exclusive whole GRBN1 GRBN2 green brown
-context exclusive whole GRYE1 GRYE2 green yellow
-context exclusive whole GRBU1 GRBU2 green blue
-context exclusive whole GRBB1 GRBB2 green brightblue
-context exclusive whole GRMA1 GRMA2 green magenta
-context exclusive whole GRBM1 GRBM2 green brightmagenta
-context exclusive whole GRCY1 GRCY2 green cyan
-context exclusive whole GRBC1 GRBC2 green brightcyan
-context exclusive whole GRLG1 GRLG2 green lightgray
-context exclusive whole GRWH1 GRWH2 green white
-context exclusive whole GRDF1 GRDF2 green default
-context exclusive whole GRBS1 GRBS2 green base
-context exclusive whole BGBK1 BGBK2 brightgreen black
-context exclusive whole BGGY1 BGGY2 brightgreen gray
-context exclusive whole BGRE1 BGRE2 brightgreen red
-context exclusive whole BGBR1 BGBR2 brightgreen brightred
-context exclusive whole BGGR1 BGGR2 brightgreen green
-context exclusive whole BGBG1 BGBG2 brightgreen brightgreen
-context exclusive whole BGBN1 BGBN2 brightgreen brown
-context exclusive whole BGYE1 BGYE2 brightgreen yellow
-context exclusive whole BGBU1 BGBU2 brightgreen blue
-context exclusive whole BGBB1 BGBB2 brightgreen brightblue
-context exclusive whole BGMA1 BGMA2 brightgreen magenta
-context exclusive whole BGBM1 BGBM2 brightgreen brightmagenta
-context exclusive whole BGCY1 BGCY2 brightgreen cyan
-context exclusive whole BGBC1 BGBC2 brightgreen brightcyan
-context exclusive whole BGLG1 BGLG2 brightgreen lightgray
-context exclusive whole BGWH1 BGWH2 brightgreen white
-context exclusive whole BGDF1 BGDF2 brightgreen default
-context exclusive whole BGBS1 BGBS2 brightgreen base
-context exclusive whole BNBK1 BNBK2 brown black
-context exclusive whole BNGY1 BNGY2 brown gray
-context exclusive whole BNRE1 BNRE2 brown red
-context exclusive whole BNBR1 BNBR2 brown brightred
-context exclusive whole BNGR1 BNGR2 brown green
-context exclusive whole BNBG1 BNBG2 brown brightgreen
-context exclusive whole BNBN1 BNBN2 brown brown
-context exclusive whole BNYE1 BNYE2 brown yellow
-context exclusive whole BNBU1 BNBU2 brown blue
-context exclusive whole BNBB1 BNBB2 brown brightblue
-context exclusive whole BNMA1 BNMA2 brown magenta
-context exclusive whole BNBM1 BNBM2 brown brightmagenta
-context exclusive whole BNCY1 BNCY2 brown cyan
-context exclusive whole BNBC1 BNBC2 brown brightcyan
-context exclusive whole BNLG1 BNLG2 brown lightgray
-context exclusive whole BNWH1 BNWH2 brown white
-context exclusive whole BNDF1 BNDF2 brown default
-context exclusive whole BNBS1 BNBS2 brown base
-context exclusive whole YEBK1 YEBK2 yellow black
-context exclusive whole YEGY1 YEGY2 yellow gray
-context exclusive whole YERE1 YERE2 yellow red
-context exclusive whole YEBR1 YEBR2 yellow brightred
-context exclusive whole YEGR1 YEGR2 yellow green
-context exclusive whole YEBG1 YEBG2 yellow brightgreen
-context exclusive whole YEBN1 YEBN2 yellow brown
-context exclusive whole YEYE1 YEYE2 yellow yellow
-context exclusive whole YEBU1 YEBU2 yellow blue
-context exclusive whole YEBB1 YEBB2 yellow brightblue
-context exclusive whole YEMA1 YEMA2 yellow magenta
-context exclusive whole YEBM1 YEBM2 yellow brightmagenta
-context exclusive whole YECY1 YECY2 yellow cyan
-context exclusive whole YEBC1 YEBC2 yellow brightcyan
-context exclusive whole YELG1 YELG2 yellow lightgray
-context exclusive whole YEWH1 YEWH2 yellow white
-context exclusive whole YEDF1 YEDF2 yellow default
-context exclusive whole YEBS1 YEBS2 yellow base
-context exclusive whole BUBK1 BUBK2 blue black
-context exclusive whole BUGY1 BUGY2 blue gray
-context exclusive whole BURE1 BURE2 blue red
-context exclusive whole BUBR1 BUBR2 blue brightred
-context exclusive whole BUGR1 BUGR2 blue green
-context exclusive whole BUBG1 BUBG2 blue brightgreen
-context exclusive whole BUBN1 BUBN2 blue brown
-context exclusive whole BUYE1 BUYE2 blue yellow
-context exclusive whole BUBU1 BUBU2 blue blue
-context exclusive whole BUBB1 BUBB2 blue brightblue
-context exclusive whole BUMA1 BUMA2 blue magenta
-context exclusive whole BUBM1 BUBM2 blue brightmagenta
-context exclusive whole BUCY1 BUCY2 blue cyan
-context exclusive whole BUBC1 BUBC2 blue brightcyan
-context exclusive whole BULG1 BULG2 blue lightgray
-context exclusive whole BUWH1 BUWH2 blue white
-context exclusive whole BUDF1 BUDF2 blue default
-context exclusive whole BUBS1 BUBS2 blue base
-context exclusive whole BBBK1 BBBK2 brightblue black
-context exclusive whole BBGY1 BBGY2 brightblue gray
-context exclusive whole BBRE1 BBRE2 brightblue red
-context exclusive whole BBBR1 BBBR2 brightblue brightred
-context exclusive whole BBGR1 BBGR2 brightblue green
-context exclusive whole BBBG1 BBBG2 brightblue brightgreen
-context exclusive whole BBBN1 BBBN2 brightblue brown
-context exclusive whole BBYE1 BBYE2 brightblue yellow
-context exclusive whole BBBU1 BBBU2 brightblue blue
-context exclusive whole BBBB1 BBBB2 brightblue brightblue
-context exclusive whole BBMA1 BBMA2 brightblue magenta
-context exclusive whole BBBM1 BBBM2 brightblue brightmagenta
-context exclusive whole BBCY1 BBCY2 brightblue cyan
-context exclusive whole BBBC1 BBBC2 brightblue brightcyan
-context exclusive whole BBLG1 BBLG2 brightblue lightgray
-context exclusive whole BBWH1 BBWH2 brightblue white
-context exclusive whole BBDF1 BBDF2 brightblue default
-context exclusive whole BBBS1 BBBS2 brightblue base
-context exclusive whole MABK1 MABK2 magenta black
-context exclusive whole MAGY1 MAGY2 magenta gray
-context exclusive whole MARE1 MARE2 magenta red
-context exclusive whole MABR1 MABR2 magenta brightred
-context exclusive whole MAGR1 MAGR2 magenta green
-context exclusive whole MABG1 MABG2 magenta brightgreen
-context exclusive whole MABN1 MABN2 magenta brown
-context exclusive whole MAYE1 MAYE2 magenta yellow
-context exclusive whole MABU1 MABU2 magenta blue
-context exclusive whole MABB1 MABB2 magenta brightblue
-context exclusive whole MAMA1 MAMA2 magenta magenta
-context exclusive whole MABM1 MABM2 magenta brightmagenta
-context exclusive whole MACY1 MACY2 magenta cyan
-context exclusive whole MABC1 MABC2 magenta brightcyan
-context exclusive whole MALG1 MALG2 magenta lightgray
-context exclusive whole MAWH1 MAWH2 magenta white
-context exclusive whole MADF1 MADF2 magenta default
-context exclusive whole MABS1 MABS2 magenta base
-context exclusive whole BMBK1 BMBK2 brightmagenta black
-context exclusive whole BMGY1 BMGY2 brightmagenta gray
-context exclusive whole BMRE1 BMRE2 brightmagenta red
-context exclusive whole BMBR1 BMBR2 brightmagenta brightred
-context exclusive whole BMGR1 BMGR2 brightmagenta green
-context exclusive whole BMBG1 BMBG2 brightmagenta brightgreen
-context exclusive whole BMBN1 BMBN2 brightmagenta brown
-context exclusive whole BMYE1 BMYE2 brightmagenta yellow
-context exclusive whole BMBU1 BMBU2 brightmagenta blue
-context exclusive whole BMBB1 BMBB2 brightmagenta brightblue
-context exclusive whole BMMA1 BMMA2 brightmagenta magenta
-context exclusive whole BMBM1 BMBM2 brightmagenta brightmagenta
-context exclusive whole BMCY1 BMCY2 brightmagenta cyan
-context exclusive whole BMBC1 BMBC2 brightmagenta brightcyan
-context exclusive whole BMLG1 BMLG2 brightmagenta lightgray
-context exclusive whole BMWH1 BMWH2 brightmagenta white
-context exclusive whole BMDF1 BMDF2 brightmagenta default
-context exclusive whole BMBS1 BMBS2 brightmagenta base
-context exclusive whole CYBK1 CYBK2 cyan black
-context exclusive whole CYGY1 CYGY2 cyan gray
-context exclusive whole CYRE1 CYRE2 cyan red
-context exclusive whole CYBR1 CYBR2 cyan brightred
-context exclusive whole CYGR1 CYGR2 cyan green
-context exclusive whole CYBG1 CYBG2 cyan brightgreen
-context exclusive whole CYBN1 CYBN2 cyan brown
-context exclusive whole CYYE1 CYYE2 cyan yellow
-context exclusive whole CYBU1 CYBU2 cyan blue
-context exclusive whole CYBB1 CYBB2 cyan brightblue
-context exclusive whole CYMA1 CYMA2 cyan magenta
-context exclusive whole CYBM1 CYBM2 cyan brightmagenta
-context exclusive whole CYCY1 CYCY2 cyan cyan
-context exclusive whole CYBC1 CYBC2 cyan brightcyan
-context exclusive whole CYLG1 CYLG2 cyan lightgray
-context exclusive whole CYWH1 CYWH2 cyan white
-context exclusive whole CYDF1 CYDF2 cyan default
-context exclusive whole CYBS1 CYBS2 cyan base
-context exclusive whole BCBK1 BCBK2 brightcyan black
-context exclusive whole BCGY1 BCGY2 brightcyan gray
-context exclusive whole BCRE1 BCRE2 brightcyan red
-context exclusive whole BCBR1 BCBR2 brightcyan brightred
-context exclusive whole BCGR1 BCGR2 brightcyan green
-context exclusive whole BCBG1 BCBG2 brightcyan brightgreen
-context exclusive whole BCBN1 BCBN2 brightcyan brown
-context exclusive whole BCYE1 BCYE2 brightcyan yellow
-context exclusive whole BCBU1 BCBU2 brightcyan blue
-context exclusive whole BCBB1 BCBB2 brightcyan brightblue
-context exclusive whole BCMA1 BCMA2 brightcyan magenta
-context exclusive whole BCBM1 BCBM2 brightcyan brightmagenta
-context exclusive whole BCCY1 BCCY2 brightcyan cyan
-context exclusive whole BCBC1 BCBC2 brightcyan brightcyan
-context exclusive whole BCLG1 BCLG2 brightcyan lightgray
-context exclusive whole BCWH1 BCWH2 brightcyan white
-context exclusive whole BCDF1 BCDF2 brightcyan default
-context exclusive whole BCBS1 BCBS2 brightcyan base
-context exclusive whole LGBK1 LGBK2 lightgray black
-context exclusive whole LGGY1 LGGY2 lightgray gray
-context exclusive whole LGRE1 LGRE2 lightgray red
-context exclusive whole LGBR1 LGBR2 lightgray brightred
-context exclusive whole LGGR1 LGGR2 lightgray green
-context exclusive whole LGBG1 LGBG2 lightgray brightgreen
-context exclusive whole LGBN1 LGBN2 lightgray brown
-context exclusive whole LGYE1 LGYE2 lightgray yellow
-context exclusive whole LGBU1 LGBU2 lightgray blue
-context exclusive whole LGBB1 LGBB2 lightgray brightblue
-context exclusive whole LGMA1 LGMA2 lightgray magenta
-context exclusive whole LGBM1 LGBM2 lightgray brightmagenta
-context exclusive whole LGCY1 LGCY2 lightgray cyan
-context exclusive whole LGBC1 LGBC2 lightgray brightcyan
-context exclusive whole LGLG1 LGLG2 lightgray lightgray
-context exclusive whole LGWH1 LGWH2 lightgray white
-context exclusive whole LGDF1 LGDF2 lightgray default
-context exclusive whole LGBS1 LGBS2 lightgray base
-context exclusive whole WHBK1 WHBK2 white black
-context exclusive whole WHGY1 WHGY2 white gray
-context exclusive whole WHRE1 WHRE2 white red
-context exclusive whole WHBR1 WHBR2 white brightred
-context exclusive whole WHGR1 WHGR2 white green
-context exclusive whole WHBG1 WHBG2 white brightgreen
-context exclusive whole WHBN1 WHBN2 white brown
-context exclusive whole WHYE1 WHYE2 white yellow
-context exclusive whole WHBU1 WHBU2 white blue
-context exclusive whole WHBB1 WHBB2 white brightblue
-context exclusive whole WHMA1 WHMA2 white magenta
-context exclusive whole WHBM1 WHBM2 white brightmagenta
-context exclusive whole WHCY1 WHCY2 white cyan
-context exclusive whole WHBC1 WHBC2 white brightcyan
-context exclusive whole WHLG1 WHLG2 white lightgray
-context exclusive whole WHWH1 WHWH2 white white
-context exclusive whole WHDF1 WHDF2 white default
-context exclusive whole WHBS1 WHBS2 white base
-context exclusive whole BSBK1 BSBK2 base black
-context exclusive whole BSGY1 BSGY2 base gray
-context exclusive whole BSRE1 BSRE2 base red
-context exclusive whole BSBR1 BSBR2 base brightred
-context exclusive whole BSGR1 BSGR2 base green
-context exclusive whole BSBG1 BSBG2 base brightgreen
-context exclusive whole BSBN1 BSBN2 base brown
-context exclusive whole BSYE1 BSYE2 base yellow
-context exclusive whole BSBU1 BSBU2 base blue
-context exclusive whole BSBB1 BSBB2 base brightblue
-context exclusive whole BSMA1 BSMA2 base magenta
-context exclusive whole BSBM1 BSBM2 base brightmagenta
-context exclusive whole BSCY1 BSCY2 base cyan
-context exclusive whole BSBC1 BSBC2 base brightcyan
-context exclusive whole BSLG1 BSLG2 base lightgray
-context exclusive whole BSWH1 BSWH2 base white
-context exclusive whole BSDF1 BSDF2 base default
-context exclusive whole BSBS1 BSBS2 base base
+    keyword whole [00] black black
+    keyword whole [01] black gray
+    keyword whole [02] black red
+    keyword whole [03] black brightred
+    keyword whole [04] black green
+    keyword whole [05] black brightgreen
+    keyword whole [06] black brown
+    keyword whole [07] black yellow
+    keyword whole [08] black blue
+    keyword whole [09] black brightblue
+    keyword whole [0a] black magenta
+    keyword whole [0b] black brightmagenta
+    keyword whole [0c] black cyan
+    keyword whole [0d] black brightcyan
+    keyword whole [0e] black lightgray
+    keyword whole [0f] black white
+    keyword whole [0g] black default
+    keyword whole [0h] black base
+    keyword whole [10] gray black
+    keyword whole [11] gray gray
+    keyword whole [12] gray red
+    keyword whole [13] gray brightred
+    keyword whole [14] gray green
+    keyword whole [15] gray brightgreen
+    keyword whole [16] gray brown
+    keyword whole [17] gray yellow
+    keyword whole [18] gray blue
+    keyword whole [19] gray brightblue
+    keyword whole [1a] gray magenta
+    keyword whole [1b] gray brightmagenta
+    keyword whole [1c] gray cyan
+    keyword whole [1d] gray brightcyan
+    keyword whole [1e] gray lightgray
+    keyword whole [1f] gray white
+    keyword whole [1g] gray default
+    keyword whole [1h] gray base
+    keyword whole [20] red black
+    keyword whole [21] red gray
+    keyword whole [22] red red
+    keyword whole [23] red brightred
+    keyword whole [24] red green
+    keyword whole [25] red brightgreen
+    keyword whole [26] red brown
+    keyword whole [27] red yellow
+    keyword whole [28] red blue
+    keyword whole [29] red brightblue
+    keyword whole [2a] red magenta
+    keyword whole [2b] red brightmagenta
+    keyword whole [2c] red cyan
+    keyword whole [2d] red brightcyan
+    keyword whole [2e] red lightgray
+    keyword whole [2f] red white
+    keyword whole [2g] red default
+    keyword whole [2h] red base
+    keyword whole [30] brightred black
+    keyword whole [31] brightred gray
+    keyword whole [32] brightred red
+    keyword whole [33] brightred brightred
+    keyword whole [34] brightred green
+    keyword whole [35] brightred brightgreen
+    keyword whole [36] brightred brown
+    keyword whole [37] brightred yellow
+    keyword whole [38] brightred blue
+    keyword whole [39] brightred brightblue
+    keyword whole [3a] brightred magenta
+    keyword whole [3b] brightred brightmagenta
+    keyword whole [3c] brightred cyan
+    keyword whole [3d] brightred brightcyan
+    keyword whole [3e] brightred lightgray
+    keyword whole [3f] brightred white
+    keyword whole [3g] brightred default
+    keyword whole [3h] brightred base
+    keyword whole [40] green black
+    keyword whole [41] green gray
+    keyword whole [42] green red
+    keyword whole [43] green brightred
+    keyword whole [44] green green
+    keyword whole [45] green brightgreen
+    keyword whole [46] green brown
+    keyword whole [47] green yellow
+    keyword whole [48] green blue
+    keyword whole [49] green brightblue
+    keyword whole [4a] green magenta
+    keyword whole [4b] green brightmagenta
+    keyword whole [4c] green cyan
+    keyword whole [4d] green brightcyan
+    keyword whole [4e] green lightgray
+    keyword whole [4f] green white
+    keyword whole [4g] green default
+    keyword whole [4h] green base
+    keyword whole [50] brightgreen black
+    keyword whole [51] brightgreen gray
+    keyword whole [52] brightgreen red
+    keyword whole [53] brightgreen brightred
+    keyword whole [54] brightgreen green
+    keyword whole [55] brightgreen brightgreen
+    keyword whole [56] brightgreen brown
+    keyword whole [57] brightgreen yellow
+    keyword whole [58] brightgreen blue
+    keyword whole [59] brightgreen brightblue
+    keyword whole [5a] brightgreen magenta
+    keyword whole [5b] brightgreen brightmagenta
+    keyword whole [5c] brightgreen cyan
+    keyword whole [5d] brightgreen brightcyan
+    keyword whole [5e] brightgreen lightgray
+    keyword whole [5f] brightgreen white
+    keyword whole [5g] brightgreen default
+    keyword whole [5h] brightgreen base
+    keyword whole [60] brown black
+    keyword whole [61] brown gray
+    keyword whole [62] brown red
+    keyword whole [63] brown brightred
+    keyword whole [64] brown green
+    keyword whole [65] brown brightgreen
+    keyword whole [66] brown brown
+    keyword whole [67] brown yellow
+    keyword whole [68] brown blue
+    keyword whole [69] brown brightblue
+    keyword whole [6a] brown magenta
+    keyword whole [6b] brown brightmagenta
+    keyword whole [6c] brown cyan
+    keyword whole [6d] brown brightcyan
+    keyword whole [6e] brown lightgray
+    keyword whole [6f] brown white
+    keyword whole [6g] brown default
+    keyword whole [6h] brown base
+    keyword whole [70] yellow black
+    keyword whole [71] yellow gray
+    keyword whole [72] yellow red
+    keyword whole [73] yellow brightred
+    keyword whole [74] yellow green
+    keyword whole [75] yellow brightgreen
+    keyword whole [76] yellow brown
+    keyword whole [77] yellow yellow
+    keyword whole [78] yellow blue
+    keyword whole [79] yellow brightblue
+    keyword whole [7a] yellow magenta
+    keyword whole [7b] yellow brightmagenta
+    keyword whole [7c] yellow cyan
+    keyword whole [7d] yellow brightcyan
+    keyword whole [7e] yellow lightgray
+    keyword whole [7f] yellow white
+    keyword whole [7g] yellow default
+    keyword whole [7h] yellow base
+    keyword whole [80] blue black
+    keyword whole [81] blue gray
+    keyword whole [82] blue red
+    keyword whole [83] blue brightred
+    keyword whole [84] blue green
+    keyword whole [85] blue brightgreen
+    keyword whole [86] blue brown
+    keyword whole [87] blue yellow
+    keyword whole [88] blue blue
+    keyword whole [89] blue brightblue
+    keyword whole [8a] blue magenta
+    keyword whole [8b] blue brightmagenta
+    keyword whole [8c] blue cyan
+    keyword whole [8d] blue brightcyan
+    keyword whole [8e] blue lightgray
+    keyword whole [8f] blue white
+    keyword whole [8g] blue default
+    keyword whole [8h] blue base
+    keyword whole [90] brightblue black
+    keyword whole [91] brightblue gray
+    keyword whole [92] brightblue red
+    keyword whole [93] brightblue brightred
+    keyword whole [94] brightblue green
+    keyword whole [95] brightblue brightgreen
+    keyword whole [96] brightblue brown
+    keyword whole [97] brightblue yellow
+    keyword whole [98] brightblue blue
+    keyword whole [99] brightblue brightblue
+    keyword whole [9a] brightblue magenta
+    keyword whole [9b] brightblue brightmagenta
+    keyword whole [9c] brightblue cyan
+    keyword whole [9d] brightblue brightcyan
+    keyword whole [9e] brightblue lightgray
+    keyword whole [9f] brightblue white
+    keyword whole [9g] brightblue default
+    keyword whole [9h] brightblue base
+    keyword whole [a0] magenta black
+    keyword whole [a1] magenta gray
+    keyword whole [a2] magenta red
+    keyword whole [a3] magenta brightred
+    keyword whole [a4] magenta green
+    keyword whole [a5] magenta brightgreen
+    keyword whole [a6] magenta brown
+    keyword whole [a7] magenta yellow
+    keyword whole [a8] magenta blue
+    keyword whole [a9] magenta brightblue
+    keyword whole [aa] magenta magenta
+    keyword whole [ab] magenta brightmagenta
+    keyword whole [ac] magenta cyan
+    keyword whole [ad] magenta brightcyan
+    keyword whole [ae] magenta lightgray
+    keyword whole [af] magenta white
+    keyword whole [ag] magenta default
+    keyword whole [ah] magenta base
+    keyword whole [b0] brightmagenta black
+    keyword whole [b1] brightmagenta gray
+    keyword whole [b2] brightmagenta red
+    keyword whole [b3] brightmagenta brightred
+    keyword whole [b4] brightmagenta green
+    keyword whole [b5] brightmagenta brightgreen
+    keyword whole [b6] brightmagenta brown
+    keyword whole [b7] brightmagenta yellow
+    keyword whole [b8] brightmagenta blue
+    keyword whole [b9] brightmagenta brightblue
+    keyword whole [ba] brightmagenta magenta
+    keyword whole [bb] brightmagenta brightmagenta
+    keyword whole [bc] brightmagenta cyan
+    keyword whole [bd] brightmagenta brightcyan
+    keyword whole [be] brightmagenta lightgray
+    keyword whole [bf] brightmagenta white
+    keyword whole [bg] brightmagenta default
+    keyword whole [bh] brightmagenta base
+    keyword whole [c0] cyan black
+    keyword whole [c1] cyan gray
+    keyword whole [c2] cyan red
+    keyword whole [c3] cyan brightred
+    keyword whole [c4] cyan green
+    keyword whole [c5] cyan brightgreen
+    keyword whole [c6] cyan brown
+    keyword whole [c7] cyan yellow
+    keyword whole [c8] cyan blue
+    keyword whole [c9] cyan brightblue
+    keyword whole [ca] cyan magenta
+    keyword whole [cb] cyan brightmagenta
+    keyword whole [cc] cyan cyan
+    keyword whole [cd] cyan brightcyan
+    keyword whole [ce] cyan lightgray
+    keyword whole [cf] cyan white
+    keyword whole [cg] cyan default
+    keyword whole [ch] cyan base
+    keyword whole [d0] brightcyan black
+    keyword whole [d1] brightcyan gray
+    keyword whole [d2] brightcyan red
+    keyword whole [d3] brightcyan brightred
+    keyword whole [d4] brightcyan green
+    keyword whole [d5] brightcyan brightgreen
+    keyword whole [d6] brightcyan brown
+    keyword whole [d7] brightcyan yellow
+    keyword whole [d8] brightcyan blue
+    keyword whole [d9] brightcyan brightblue
+    keyword whole [da] brightcyan magenta
+    keyword whole [db] brightcyan brightmagenta
+    keyword whole [dc] brightcyan cyan
+    keyword whole [dd] brightcyan brightcyan
+    keyword whole [de] brightcyan lightgray
+    keyword whole [df] brightcyan white
+    keyword whole [dg] brightcyan default
+    keyword whole [dh] brightcyan base
+    keyword whole [e0] lightgray black
+    keyword whole [e1] lightgray gray
+    keyword whole [e2] lightgray red
+    keyword whole [e3] lightgray brightred
+    keyword whole [e4] lightgray green
+    keyword whole [e5] lightgray brightgreen
+    keyword whole [e6] lightgray brown
+    keyword whole [e7] lightgray yellow
+    keyword whole [e8] lightgray blue
+    keyword whole [e9] lightgray brightblue
+    keyword whole [ea] lightgray magenta
+    keyword whole [eb] lightgray brightmagenta
+    keyword whole [ec] lightgray cyan
+    keyword whole [ed] lightgray brightcyan
+    keyword whole [ee] lightgray lightgray
+    keyword whole [ef] lightgray white
+    keyword whole [eg] lightgray default
+    keyword whole [eh] lightgray base
+    keyword whole [f0] white black
+    keyword whole [f1] white gray
+    keyword whole [f2] white red
+    keyword whole [f3] white brightred
+    keyword whole [f4] white green
+    keyword whole [f5] white brightgreen
+    keyword whole [f6] white brown
+    keyword whole [f7] white yellow
+    keyword whole [f8] white blue
+    keyword whole [f9] white brightblue
+    keyword whole [fa] white magenta
+    keyword whole [fb] white brightmagenta
+    keyword whole [fc] white cyan
+    keyword whole [fd] white brightcyan
+    keyword whole [fe] white lightgray
+    keyword whole [ff] white white
+    keyword whole [fg] white default
+    keyword whole [fh] white base
+    keyword whole [g0] default black
+    keyword whole [g1] default gray
+    keyword whole [g2] default red
+    keyword whole [g3] default brightred
+    keyword whole [g4] default green
+    keyword whole [g5] default brightgreen
+    keyword whole [g6] default brown
+    keyword whole [g7] default yellow
+    keyword whole [g8] default blue
+    keyword whole [g9] default brightblue
+    keyword whole [ga] default magenta
+    keyword whole [gb] default brightmagenta
+    keyword whole [gc] default cyan
+    keyword whole [gd] default brightcyan
+    keyword whole [ge] default lightgray
+    keyword whole [gf] default white
+    keyword whole [gg] default default
+    keyword whole [gh] default base
+    keyword whole [h0] base black
+    keyword whole [h1] base gray
+    keyword whole [h2] base red
+    keyword whole [h3] base brightred
+    keyword whole [h4] base green
+    keyword whole [h5] base brightgreen
+    keyword whole [h6] base brown
+    keyword whole [h7] base yellow
+    keyword whole [h8] base blue
+    keyword whole [h9] base brightblue
+    keyword whole [ha] base magenta
+    keyword whole [hb] base brightmagenta
+    keyword whole [hc] base cyan
+    keyword whole [hd] base brightcyan
+    keyword whole [he] base lightgray
+    keyword whole [hf] base white
+    keyword whole [hg] base default
+    keyword whole [hh] base base
