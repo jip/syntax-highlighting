@@ -1,5 +1,13 @@
 2026-03-18
 
+J syntax for mc, version 3.0.0
+- sync with J9.7
+- is rewritten completely
+- color names are replaced by pre-defined aliases
+- highlight noun blocks
+- highlight alert words in comments
+- add a test, update a demo
+
 colors table for mcedit, version 2.1.0
 - base color is removed (to sync with mc upstream)
 
