@@ -1,3 +1,13 @@
+# mcedit colors table Syntax highlighting Definition
+# Version 2.1.0 2026-03-18
+# See updates and changelog at https://github.com/jip/syntax-highlighting
+#
+# This file is part of GNU Midnight Commander
+# https://midnight-commander.org/
+#
+# SPDX-FileCopyrightText: 2009,2026 Igor Zhuravlov <zhuravlov.ip@ya.ru>
+# SPDX-License-Identifier: GPL-3.0-or-later
+
 wholechars abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789[]
 context default
     keyword whole [00] black black
@@ -17,7 +27,6 @@ context default
     keyword whole [0e] black lightgray
     keyword whole [0f] black white
     keyword whole [0g] black default
-    keyword whole [0h] black base
     keyword whole [10] gray black
     keyword whole [11] gray gray
     keyword whole [12] gray red
@@ -35,7 +44,6 @@ context default
     keyword whole [1e] gray lightgray
     keyword whole [1f] gray white
     keyword whole [1g] gray default
-    keyword whole [1h] gray base
     keyword whole [20] red black
     keyword whole [21] red gray
     keyword whole [22] red red
@@ -53,7 +61,6 @@ context default
     keyword whole [2e] red lightgray
     keyword whole [2f] red white
     keyword whole [2g] red default
-    keyword whole [2h] red base
     keyword whole [30] brightred black
     keyword whole [31] brightred gray
     keyword whole [32] brightred red
@@ -71,7 +78,6 @@ context default
     keyword whole [3e] brightred lightgray
     keyword whole [3f] brightred white
     keyword whole [3g] brightred default
-    keyword whole [3h] brightred base
     keyword whole [40] green black
     keyword whole [41] green gray
     keyword whole [42] green red
@@ -89,7 +95,6 @@ context default
     keyword whole [4e] green lightgray
     keyword whole [4f] green white
     keyword whole [4g] green default
-    keyword whole [4h] green base
     keyword whole [50] brightgreen black
     keyword whole [51] brightgreen gray
     keyword whole [52] brightgreen red
@@ -107,7 +112,6 @@ context default
     keyword whole [5e] brightgreen lightgray
     keyword whole [5f] brightgreen white
     keyword whole [5g] brightgreen default
-    keyword whole [5h] brightgreen base
     keyword whole [60] brown black
     keyword whole [61] brown gray
     keyword whole [62] brown red
@@ -125,7 +129,6 @@ context default
     keyword whole [6e] brown lightgray
     keyword whole [6f] brown white
     keyword whole [6g] brown default
-    keyword whole [6h] brown base
     keyword whole [70] yellow black
     keyword whole [71] yellow gray
     keyword whole [72] yellow red
@@ -143,7 +146,6 @@ context default
     keyword whole [7e] yellow lightgray
     keyword whole [7f] yellow white
     keyword whole [7g] yellow default
-    keyword whole [7h] yellow base
     keyword whole [80] blue black
     keyword whole [81] blue gray
     keyword whole [82] blue red
@@ -161,7 +163,6 @@ context default
     keyword whole [8e] blue lightgray
     keyword whole [8f] blue white
     keyword whole [8g] blue default
-    keyword whole [8h] blue base
     keyword whole [90] brightblue black
     keyword whole [91] brightblue gray
     keyword whole [92] brightblue red
@@ -179,7 +180,6 @@ context default
     keyword whole [9e] brightblue lightgray
     keyword whole [9f] brightblue white
     keyword whole [9g] brightblue default
-    keyword whole [9h] brightblue base
     keyword whole [a0] magenta black
     keyword whole [a1] magenta gray
     keyword whole [a2] magenta red
@@ -197,7 +197,6 @@ context default
     keyword whole [ae] magenta lightgray
     keyword whole [af] magenta white
     keyword whole [ag] magenta default
-    keyword whole [ah] magenta base
     keyword whole [b0] brightmagenta black
     keyword whole [b1] brightmagenta gray
     keyword whole [b2] brightmagenta red
@@ -215,7 +214,6 @@ context default
     keyword whole [be] brightmagenta lightgray
     keyword whole [bf] brightmagenta white
     keyword whole [bg] brightmagenta default
-    keyword whole [bh] brightmagenta base
     keyword whole [c0] cyan black
     keyword whole [c1] cyan gray
     keyword whole [c2] cyan red
@@ -233,7 +231,6 @@ context default
     keyword whole [ce] cyan lightgray
     keyword whole [cf] cyan white
     keyword whole [cg] cyan default
-    keyword whole [ch] cyan base
     keyword whole [d0] brightcyan black
     keyword whole [d1] brightcyan gray
     keyword whole [d2] brightcyan red
@@ -251,7 +248,6 @@ context default
     keyword whole [de] brightcyan lightgray
     keyword whole [df] brightcyan white
     keyword whole [dg] brightcyan default
-    keyword whole [dh] brightcyan base
     keyword whole [e0] lightgray black
     keyword whole [e1] lightgray gray
     keyword whole [e2] lightgray red
@@ -269,7 +265,6 @@ context default
     keyword whole [ee] lightgray lightgray
     keyword whole [ef] lightgray white
     keyword whole [eg] lightgray default
-    keyword whole [eh] lightgray base
     keyword whole [f0] white black
     keyword whole [f1] white gray
     keyword whole [f2] white red
@@ -287,7 +282,6 @@ context default
     keyword whole [fe] white lightgray
     keyword whole [ff] white white
     keyword whole [fg] white default
-    keyword whole [fh] white base
     keyword whole [g0] default black
     keyword whole [g1] default gray
     keyword whole [g2] default red
@@ -305,22 +299,3 @@ context default
     keyword whole [ge] default lightgray
     keyword whole [gf] default white
     keyword whole [gg] default default
-    keyword whole [gh] default base
-    keyword whole [h0] base black
-    keyword whole [h1] base gray
-    keyword whole [h2] base red
-    keyword whole [h3] base brightred
-    keyword whole [h4] base green
-    keyword whole [h5] base brightgreen
-    keyword whole [h6] base brown
-    keyword whole [h7] base yellow
-    keyword whole [h8] base blue
-    keyword whole [h9] base brightblue
-    keyword whole [ha] base magenta
-    keyword whole [hb] base brightmagenta
-    keyword whole [hc] base cyan
-    keyword whole [hd] base brightcyan
-    keyword whole [he] base lightgray
-    keyword whole [hf] base white
-    keyword whole [hg] base default
-    keyword whole [hh] base base
