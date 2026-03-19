@@ -1,5 +1,9 @@
 2026-03-19
 
+BNF/EBNF/ABNF/WBNF syntax for Kate, version 2
+- first version committed
+- add a demo
+
 J syntax for Kate, version 6
 - move out changelog to external file
 - fix bnum entitiy definition
