@@ -1,0 +1,42 @@
+# This is a single-line comment
+# check regions overlapping priority: Abc -12 \n \x1F \u1a2B 'quoted' "text"
+# check no parts of speech are detected: ::= | / \ - ! $ % & @ ^ ~ * + ? , . ; ( ) [ ] { } < > ?? ??
+# special labels: BUG DEPRECATED FIXME NOTE TEST TODO WARN
+# A :== B | C | 'foo'  # rule and comment both inside the comment
+(* This is a foldable multi-line comment
+   check regions overlapping priority: Abc -12 \n \x1F \u1a2B 'quoted' "text"
+   check no parts of speech are detected: ::= | / \ - ! $ % & @ ^ ~ * + ? , . ; ( ) [ ] { } < > ?? ??
+   special labels: BUG DEPRECATED FIXME NOTE TEST TODO WARN
+   A :== B | C | 'foo'  # rule and comment both inside the comment
+*)
+/* This is a foldable multi-line comment
+   check regions overlapping priority: Abc -12 \n \x1F \u1a2B 'quoted' "text"
+   check no parts of speech are detected: ::= | / \ - ! $ % & @ ^ ~ * + ? , . ; ( ) [ ] { } < > ?? ??
+   special labels: BUG DEPRECATED FIXME NOTE TEST TODO WARN
+   A :== B | C | 'foo'  # rule and comment both inside the comment
+*/
+??namespace('hl_test')??                     # global special sequence
+A :≡  'foo' (* inline comment *) "bar"       # strings, comment to EOL
+A :== | '' | "" | B ('baz' | "qux") C        # grouping, alternation, first 3 alternatives are empty strings
+A :=  B1 C1 | B2 C2 / B3 C3 \ B4 C4 - B5 C5  # combinators (binary operators)
+A ::= B ! C $ D % E & F @ G ^ H ~ I          # unary operators (either prefix or postfix)
+A ::  2B B{2} B{2,2} 2*C C{2,} 2*3D D{2,3}   # repetitions (both prefix and postfix)
+A :  'b' 'c' | 'b' '' 'c' | 'b' 0B 'c' | 'bc'                                      # all alternatives are the same
+A =   B C  | (  B C  )   | (B) (C)  | (B C){1}  | (B C){1,1} | 1 (B C) | 1*1(B C)  # all alternatives are the same
+A <- [B C] | (/ B C /)   | (B   C)? | (B C){,1} | (B C){0,1}           | 0*1(B C)  # all alternatives are the same
+A -> <B C> | {  B C  } - | (B   C)+ | (B C){1,}                        | 1* (B C)  # all alternatives are the same
+A <= {B C} | (: B C :)   | (B   C)* | (B C){0,} | (B C){,}             | 0* (B C)  # all alternatives are the same
+A => B   C | D .  # rule terminator
+A ←  B   C | D ;  # rule terminator
+A →  B , C | D ;  # is the same as above in ISO EBNF
+A ⇐  '\' \" \\ \a \b \c \t \n \v \f \r \x123 \x9ab \xaBC \xAbc \xABC'
+     '\u12345 \u12abc \uAbCdE \uBCDEF \U123456789 \U123abcdef \UabcdBCDEF \U12ABCDEFG 123 abc ABC'  # escaping
+A ⇒  "\' \" \\ \a \b \c \t \n \v \f \r \x123 \x9ab \xaBC \xAbc \xABC"
+     "\u12345 \u12abc \uAbCdE \uBCDEF \U123456789 \U123abcdef \UabcdBCDEF \U12ABCDEFG 123 abc ABC"  # escaping
+Aa1_1aA_                              # long name in LHS,
+  ≜ BC def Gh12 iJ3_4 KlM n_oP _Q_r_  #   long names in RHS,
+  | 'corge'                           #   multi-line definition,
+  | nsX.A-b_alt_lbl: E                #   alternative's label
+  ??42\?\?-1\?delete??                #   local special sequence with escaped chars
+ns1.ns0.A = nso.B C 'grault'          # names from namespace in LHS and RHS
+<Ab1-2.cd> = <E> <Fg> <_3> <H.i4_J5>  # names quoted by angle brackets
