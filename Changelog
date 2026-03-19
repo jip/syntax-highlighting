@@ -1,5 +1,14 @@
 2026-03-19
 
+J syntax for Kate, version 6
+- move out changelog to external file
+- fix bnum entitiy definition
+- sync parts of speech with J9.7
+- add foldable Note and DD
+- bump version from "5" to "6"
+- minor clean-up
+- update a demo
+
 TREE-META syntax for mc, version 1.0.0
 - first version committed
 - add test and demo
