@@ -1,0 +1,36 @@
+ADR Label
+ B Label
+  BE
+	BF Label
+	BT Label
+	CI
+	CL 'string'
+	CLL Label
+	END
+	GN1
+	GN2
+	ID
+Label
+	LB
+	NUM
+	OUT
+	R
+	SET
+	SR
+	TST 'string'
+Extensions
+	GN
+	NL
+	TB
+	LMI
+	LMD
+	CC 127
+	CGE 128
+	CLE 129
+	CE 130
+	LCH 131
+	NOT
+	TFT
+	TFF
+	RF
+	SCN

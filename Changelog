@@ -1,5 +1,9 @@
 2026-03-19
 
+META II syntax for mc, version 1.0.0
+- first version committed
+- add a test and a demo
+
 BNF/EBNF/ABNF/WBNF syntax for mc, version 2.0.0
 - TBNF and XBNF support are removed
 - is rewritten completely
