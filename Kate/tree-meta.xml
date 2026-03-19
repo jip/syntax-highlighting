@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE language [
+  <!ENTITY uint  "0|[1-9]\d*">
+  <!ENTITY hex   "[0-9a-fA-F]">
+  <!ENTITY ucode "\\u&hex;{4}|\\U&hex;{8}">
+]>
+<!--
+  TREE-META (both source and object code) Syntax Highlighting Definition
+  Version 1.0.0 2026-03-06
+  See updates and changelog at https://github.com/jip/syntax-highlighting
+
+  TREE-META is a metacompiler developed by D. Andrews and J. Rulifson in
+  the 1967, see:
+  Andrews, D. I., Rulifson, J. F. (1967). Tree Meta (Working Draft):
+  A Meta Compiler for the SDS 940. Stanford Research Institute, Menlo
+  Park, CA. Engelbart Collection, Stanford University Archive.
+
+  This file is part of the KDE's KSyntaxHighlighting framework
+  https://invent.kde.org/frameworks/syntax-highlighting
+
+  SPDX-FileCopyrightText: 2026 Igor Zhuravlov <zhuravlov.ip@ya.ru>
+  SPDX-License-Identifier: GPL-3.0-or-later
+-->
+<language name="TREE-META"
+          section="Sources"
+          version="1"
+          kateversion="5.0"
+          extensions="*.tm;*.tmo"
+          mimetype="text/x-meta-src;text/x-meta-code"
+          author="Igor Zhuravlov (zhuravlov.ip@ya.ru)"
+          indenter="normal"
+          license="GPL">
+  <highlighting>
+    <list name="opcodes">
+      <item>ADD</item>
+      <item>AND</item>
+      <item>BF</item>
+      <item>BRARG</item>
+      <item>BR</item>
+      <item>BT</item>
+      <item>CALL</item>
+      <item>CBTP</item>
+      <item>CELL</item>
+      <item>CGER</item>
+      <item>CHASE</item>
+      <item>CHRCODE</item>
+      <item>CHR</item>
+      <item>CKBR</item>
+      <item>CKCHR</item>
+      <item>CKDIG</item>
+      <item>CKHEX</item>
+      <item>CKID</item>
+      <item>CKLAB</item>
+      <item>CKLET</item>
+      <item>CKNDNAM</item>
+      <item>CKNUM</item>
+      <item>CKOCT</item>
+      <item>CKSR</item>
+      <item>CKTXT</item>
+      <item>CLABS</item>
+      <item>CMPEQ</item>
+      <item>CMPL</item>
+      <item>CMPNEQ</item>
+      <item>CMPSGET</item>
+      <item>CMPSGT</item>
+      <item>CMPSLET</item>
+      <item>CMPSLT</item>
+      <item>CMPUGET</item>
+      <item>CMPUGT</item>
+      <item>CMPULET</item>
+      <item>CMPULT</item>
+      <item>CNTCK</item>
+      <item>DIG</item>
+      <item>DUMP</item>
+      <item>EOR</item>
+      <item>ERCHK</item>
+      <item>ERSTR</item>
+      <item>FUNC</item>
+      <item>GNLB</item>
+      <item>HEX</item>
+      <item>ID</item>
+      <item>LBARG</item>
+      <item>LET</item>
+      <item>LNEG</item>
+      <item>LOADI</item>
+      <item>LOAD</item>
+      <item>LSH</item>
+      <item>MOVTO</item>
+      <item>MUL</item>
+      <item>NDLBL</item>
+      <item>NDMK</item>
+      <item>NEG</item>
+      <item>NUM</item>
+      <item>NXTBR</item>
+      <item>OCT</item>
+      <item>OER</item>
+      <item>ONL</item>
+      <item>OR</item>
+      <item>OUTCH</item>
+      <item>OUTCL</item>
+      <item>OUTRE</item>
+      <item>OUTSR</item>
+      <item>RC</item>
+      <item>RSTBR</item>
+      <item>RSTRP</item>
+      <item>R</item>
+      <item>SAVEP</item>
+      <item>SBTP</item>
+      <item>SDIV</item>
+      <item>SET</item>
+      <item>SMOD</item>
+      <item>SRARG</item>
+      <item>SRCHECK</item>
+      <item>SRINIT</item>
+      <item>SRP</item>
+      <item>SRSH</item>
+      <item>SR</item>
+      <item>STORE</item>
+      <item>SUB</item>
+      <item>TST</item>
+      <item>UDIV</item>
+      <item>UMOD</item>
+      <item>URSH</item>
+    </list>
+    <list name="keywords">
+      <item>.CHR</item>
+      <item>.DELIM</item>
+      <item>.DIG</item>
+      <item>.EMPTY</item>
+      <item>.END</item>
+      <item>.HEX</item>
+      <item>.ID</item>
+      <item>.LET</item>
+      <item>.LIST</item>
+      <item>.META</item>
+      <item>.NUM</item>
+      <item>.OCT</item>
+      <item>.SR</item>
+    </list>
+    <list name="functions">
+      <item>CLEAR</item>
+      <item>CODE</item>
+      <item>CONV</item>
+      <item>ENTER</item>
+      <item>LEN</item>
+      <item>LOOK</item>
+      <item>OUTC</item>
+      <item>OUTL</item>
+      <item>OUTS</item>
+      <item>OUT</item>
+      <item>POP</item>
+      <item>PUSH</item>
+      <item>XCONV</item>
+    </list>
+    <contexts>
+      <context attribute="Normal Code" lineEndContext="#stay" name="normal code">
+        <DetectSpaces/>
+        <AnyChar          attribute="Normal Source" context="normal source" String=".£" lookAhead="true"/>
+        <keyword          attribute="Keyword"       context="#stay"         String="opcodes"/>
+        <DetectIdentifier attribute="Label"         context="#stay"/>
+        <DetectChar       attribute="String"        context="sq-string"     char="&apos;"/>
+        <DetectChar       attribute="String"        context="dq-string"     char="&quot;"/>
+        <RegExpr          attribute="Integer"       context="#stay"         String="&uint;"/>
+      </context>
+      <context attribute="Normal Source" lineEndContext="#stay" name="normal source">
+        <DetectSpaces/>
+        <DetectChar       attribute="Comment"       context="comment block" char="£" beginRegion="CommentBlock"/>
+        <keyword          attribute="Keyword"       context="#stay"         String="keywords" weakDeliminator="."/>
+        <keyword          attribute="Function"      context="#stay"         String="functions"/>
+        <DetectIdentifier attribute="Identifier"    context="#stay"/>
+        <DetectChar       attribute="String"        context="sq-string"     char="&apos;"/>
+        <DetectChar       attribute="String"        context="dq-string"     char="&quot;"/>
+        <RegExpr          attribute="Integer"       context="#stay"         String="&uint;"/>
+        <Detect2Chars     attribute="Assignment"    context="#stay"         char=":" char1="="/>
+        <Detect2Chars     attribute="Assignment"    context="#stay"         char="=" char1="&gt;"/>
+        <DetectChar       attribute="Assignment"    context="#stay"         char="="/>
+        <Detect2Chars     attribute="Operator"      context="#stay"         char="%" char1="%"/>
+        <Detect2Chars     attribute="Operator"      context="#stay"         char="/" char1="/"/>
+        <Detect2Chars     attribute="Operator"      context="#stay"         char="&lt;" char1="-"/>
+        <Detect2Chars     attribute="Operator"      context="#stay"         char="&lt;" char1="&lt;"/>
+        <StringDetect     attribute="Operator"      context="#stay"         String="&gt;&gt;&gt;"/>
+        <Detect2Chars     attribute="Operator"      context="#stay"         char="&gt;" char1="&gt;"/>
+        <Detect2Chars     attribute="Operator"      context="#stay"         char="&lt;" char1="="/>
+        <Detect2Chars     attribute="Operator"      context="#stay"         char="&gt;" char1="="/>
+        <AnyChar          attribute="Operator"      context="#stay"         String="!#$%&amp;*+-.&lt;=&gt;?@^~"/>
+        <AnyChar          attribute="Alternation"   context="#stay"         String="/|"/>
+        <DetectChar       attribute="Parenthese"    context="#stay"         char="(" beginRegion="PBlock"/>
+        <DetectChar       attribute="Parenthese"    context="#stay"         char=")" endRegion="PBlock"/>
+        <DetectChar       attribute="Parenthese"    context="#stay"         char="[" beginRegion="SBlock"/>
+        <DetectChar       attribute="Parenthese"    context="#stay"         char="]" endRegion="SBlock"/>
+        <AnyChar          attribute="Separator"     context="#stay"         String=",:;"/>
+      </context>
+      <context attribute="Comment" lineEndContext="#stay" name="comment block">
+        <DetectSpaces/>
+        <IncludeRules context="##Comments"/>
+        <DetectChar       attribute="Comment"       context="#pop"          char="£" endRegion="CommentBlock"/>
+      </context>
+      <context attribute="String" lineEndContext="#pop" name="sq-string">
+        <DetectChar       attribute="String"        context="#pop"          char="&apos;"/>
+        <HlCStringChar    attribute="String Char"   context="#stay"/>
+        <RegExpr          attribute="String Char"   context="#stay"         String="&ucode;"/>
+      </context>
+      <context attribute="String" lineEndContext="#pop" name="dq-string">
+        <DetectChar       attribute="String"        context="#pop"          char="&quot;"/>
+        <HlCStringChar    attribute="String Char"   context="#stay"/>
+        <RegExpr          attribute="String Char"   context="#stay"         String="&ucode;"/>
+      </context>
+    </contexts>
+    <itemDatas>
+      <itemData name="Normal Code"   defStyleNum="dsNormal"/>
+      <itemData name="Normal Source" defStyleNum="dsNormal"/>
+      <itemData name="Alternation"   defStyleNum="dsOperator" color="#b26818" selColor="#935314" bold="true"/> <!-- Kate BUG 517160: bold attribute is ignored if this element is placed first within itemDatas -->
+      <itemData name="Assignment"    defStyleNum="dsOperator" bold="true"/>
+      <itemData name="Comment"       defStyleNum="dsComment"  spellChecking="true"/>
+      <itemData name="Function"      defStyleNum="dsFunction"/>
+      <itemData name="Identifier"    defStyleNum="dsNormal"/>
+      <itemData name="Integer"       defStyleNum="dsDecVal"/>
+      <itemData name="Keyword"       defStyleNum="dsControlFlow"/>
+      <itemData name="Label"         defStyleNum="dsNormal"/>
+      <itemData name="Operator"      defStyleNum="dsOperator" color="#18b218" selColor="#138c13" bold="true"/>
+      <itemData name="Parenthese"    defStyleNum="dsRegionMarker"/>
+      <itemData name="Separator"    defStyleNum="dsOperator" bold="true"/>
+      <itemData name="String"        defStyleNum="dsString"/>
+      <itemData name="String Char"   defStyleNum="dsSpecialChar"/>
+    </itemDatas>
+  </highlighting>
+  <general>
+    <comments>
+      <comment name="multiLine"  start="%" end="%" region="CommentBlock"/>
+    </comments>
+    <folding indentationsensitive="true"/>
+    <keywords casesensitive="false"/>
+  </general>
+</language>
+<!-- kate: replace-tabs on; indent-width 2; -->
