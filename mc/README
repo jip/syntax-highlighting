@@ -4,13 +4,50 @@ visual, dual-pane file manager
   https://github.com/MidnightCommander/
 
 mcedit
-embedded full-featured text editor with syntax highlighting support
+full-featured text editor with syntax highlighting support
+embedded into mc
 
 -------------------------------------------------------------
 Resources location
+
+mc Skin Editor
+  https://skins.midnight-commander.org/
 
 system's mcedit syntax highlighting files are placed in dir:
   /usr/share/mc/syntax
 
 user's mcedit syntax highlighting files are placed in dir:
   ~/.local/share/mc/syntax
+
+-------------------------------------------------------------
+Hints
+
+mcedit highlighter regular expression's syntax is
+non-standard, and is poorely documented. Some info is below:
+
+mcedit    PCRE2's equivalent
+[a-c]     \[a-c\]    (no special meaning of [ ])
+\[a-c\]   (a|-|c)*   (no special meaning of -  )
+{a-c}     \{a-c\}    (no special meaning of { })
+\{a-c\}   [ac-]      (no special meaning of -  )
+.         \.
+(         \(
+)         \)
+*         .*
++         [^ \t]*
+?         \?
+\*        \*
+\+        \+
+^         \^
+$         \$
+|         \|
+\s        [ ]        (space only)
+\t        \t
+\n        \n
+
+Pressing C-s twice effectively reloads the syntax file (so
+you don't have to exit the editor, or MC itself, to test
+your syntax modifications).
+
+References:
+[1] https://github.com/MidnightCommander/mc/issues/3734

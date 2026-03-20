@@ -4,6 +4,10 @@ text editor
 
 Syntax Highlighting Engine
   https://invent.kde.org/frameworks/syntax-highlighting
+  https://github.com/KDE/syntax-highlighting (mirror)
+
+Syntax Highlighting definitions on-line
+  https://kate-editor.org/syntax/
 
 How to contribute:
 - just send the file to the KWrite-Devel mailing list
