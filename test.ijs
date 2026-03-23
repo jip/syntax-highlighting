@@ -21,8 +21,8 @@ Strings
 'check special labels aren''t detected: BUG DEPRECATED FIXME NOTE TEST TODO WARN'
 
 Numbers
-12 34.56 _7.89 1e2 1.2e_3 _. _ __ 123j_456 2b11 2b111.111
-1r_23 123456x 1.2e3j4.5e6 _j_ __j_ _.j_. _j3p4j_.
+123 _123 36b_1a.z2 _36b_1a.z2 123x _123x 1r23 _1r_23 1.23 _1.23 1.2e3 _1.2e_3
+ _. _ __ 1.2e3j4.5e_6 _1.2e3j_4.5e_6 _j_ __j_ _.j_. 1j2p3j4 _1j2p_3j4 _j3p4j_.
 
 Nouns
 a. a: m n x y

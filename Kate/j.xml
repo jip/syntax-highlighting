@@ -4,13 +4,13 @@
   <!ENTITY unum "\d+">                                 <!-- Unsigned integer number, e.g. 123 -->
   <!ENTITY inum "_?&unum;">                            <!-- Integer number, e.g. _123 -->
   <!ENTITY anum "[a-z\d]+">                            <!-- Non-decimal unsigned integer number, e.g. 1a -->
-  <!ENTITY bnum "\b&unum;b_?&anum;(\.&anum;)?\b">      <!-- Non-decimal number, e.g. 36b_1a.z2 -->
+  <!ENTITY bnum "\b_?&unum;b_?&anum;(\.&anum;)?\b">    <!-- Non-decimal number, e.g. _36b_1a.z2 -->
   <!ENTITY xnum "\b&inum;x\b">                         <!-- Extended precision integer number, e.g. _123x -->
   <!ENTITY rnum "\b&inum;r&inum;\b">                   <!-- Rational number, e.g. _1r23 -->
-  <!ENTITY fnum "&inum;(\.&unum;)?">                   <!-- Floating point number, e.g. 1.23 -->
-  <!ENTITY enum "(&fnum;(e&inum;)?|_?_|_\.)">          <!-- Exponential (scientific) notation, e.g. 1.2e_3 -->
-  <!ENTITY cnum "&enum;((j|a[dr])&enum;)?">            <!-- Complex number, e.g. 1.2e3j4.5e_6 -->
-  <!ENTITY pnum "\b&cnum;([px]&cnum;)?(?![a-z\d_.])">  <!-- Number based on pi or on e, e.g. 1j2p3j4 -->
+  <!ENTITY fnum "&inum;(\.&unum;)?">                   <!-- Floating point number, e.g. _1.23 -->
+  <!ENTITY enum "(&fnum;(e&inum;)?|_?_|_\.)">          <!-- Exponential (scientific) notation, e.g. _1.2e_3 -->
+  <!ENTITY cnum "&enum;((j|a[dr])&enum;)?">            <!-- Complex number, e.g. _1.2e3j_4.5e_6 -->
+  <!ENTITY pnum "\b&cnum;([px]&cnum;)?(?![a-z\d_.])">  <!-- Number based on pi or on e, e.g. _1j2p3j4 -->
   <!ENTITY name "[a-zA-Z]\w*">                         <!-- Name -->
   <!ENTITY lname "\b&name;_(&name;)?_\b">              <!-- Locative, a__ means a_base_ -->
   <!ENTITY ilname "\b&name;__&name;\b">                <!-- Indirect locative -->
@@ -31,7 +31,7 @@
 -->
 <language name="J"
           section="Scripts"
-          version="6"
+          version="7"
           kateversion="5.0"
           extensions="*.ijs;*.ijt;*.ijx"
           mimetype="text/x-j;text/x-jsrc"

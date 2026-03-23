@@ -1,3 +1,17 @@
+2026-03-23
+
+tests:
+- test.ijs : improve 'Numbers' section
+
+J syntax for Kate, version 7
+- fix bnum entitiy definition
+- improve comments
+- bump version
+- update a demo
+
+J syntax for mc
+- update a demo
+
 2026-03-19
 
 maintanance
