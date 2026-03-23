@@ -1,5 +1,5 @@
 # BNF family (BNF, EBNF, ABNF, WBNF etc.) Syntax Highlighting Definition
-# Version 2.0.0 2026-03-19
+# Version 3.0.0 2026-03-23
 # See updates and changelog at https://github.com/jip/syntax-highlighting
 #
 # Backus-Naur form (BNF) is a notation technique for context-free grammars
@@ -61,24 +61,21 @@ context default
     keyword ⇐ _assign
     keyword ⇒ _assign
     keyword ≜ _assign
-    # multi-line comments
-    keyword (\* _comment
-    keyword \*) _comment
-    keyword /\* _comment
-    keyword \*/ _comment
     # combinators
     keyword | _comb
     keyword / _comb
     keyword \\ _comb
     keyword - _comb
+    keyword , _comb
     # operators
     keyword ! _oper
+    keyword # _oper
     keyword $ _oper
-    keyword % _oper
+#    keyword % _oper
     keyword & _oper
     keyword \* _oper
     keyword \+ _oper
-#    keyword ? _oper
+    keyword ? _oper
     keyword @ _oper
     keyword ^ _oper
     keyword ~ _oper
@@ -92,7 +89,7 @@ context default
     keyword { _group
     keyword } _group
     # concatenator,separator,terminator
-    keyword \{,.;\} _sep
+    keyword \{.;\} _sep
 
 # strings
 
@@ -114,32 +111,13 @@ context " " _str
 
 # special sequence
 
-context ?? ?? _special
-    keyword \\? _special
+context ` ` _special
+    keyword \\` _special
 
 # comments
 
-context # \n _comment
-    keyword whole BUG        _alerthi
-    keyword whole DEPRECATED _alertmi
-    keyword whole FIXME      _alerthi
-    keyword whole NOTE       _alertlo
-    keyword whole TEST       _alertlo
-    keyword whole TODO       _alertmi
-    keyword whole WARN       _alertmi
-    spellcheck
-
-context exclusive (\* \*) _comment
-    keyword whole BUG        _alerthi
-    keyword whole DEPRECATED _alertmi
-    keyword whole FIXME      _alerthi
-    keyword whole NOTE       _alertlo
-    keyword whole TEST       _alertlo
-    keyword whole TODO       _alertmi
-    keyword whole WARN       _alertmi
-    spellcheck
-
-context exclusive /\* \*/ _comment
+context % % _comment
+    keyword \\% _comment
     keyword whole BUG        _alerthi
     keyword whole DEPRECATED _alertmi
     keyword whole FIXME      _alerthi

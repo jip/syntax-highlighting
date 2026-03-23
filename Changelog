@@ -1,8 +1,5 @@
 2026-03-23
 
-tests:
-- test.ijs : improve 'Numbers' section
-
 J syntax for Kate, version 7
 - fix bnum entitiy definition
 - improve comments
@@ -11,6 +8,19 @@ J syntax for Kate, version 7
 
 J syntax for mc
 - update a demo
+
+BNF/EBNF/ABNF/WBNF syntax for Kate, version 3 and
+BNF/EBNF/ABNF/WBNF syntax for mc, version 3.0.0 :
+- add unary prefix repetition operators (#) and (<n,n>)
+- comma (,) is a combinator not separator
+- change special block region markers
+- change comment block markers
+- bump version
+- update a demo
+
+tests:
+- test.ijs : improve 'Numbers' section
+- test.bnf : sync with changes
 
 2026-03-19
 

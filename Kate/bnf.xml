@@ -18,7 +18,7 @@
 -->
 <language name="BNF/EBNF/ABNF/WBNF"
           section="Sources"
-          version="2"
+          version="3"
           kateversion="5.0"
           extensions="*.bnf;*.ebnf"
           mimetype="text/x-bnf;text/x-ebnf"
@@ -30,79 +30,69 @@
       <context attribute="Normal Text" lineEndContext="#stay" name="Normal">
         <DetectSpaces/>
 
-        <RegExpr          attribute="Label"         context="#stay"           String="&name;:"/>
+        <RegExpr          attribute="Label"         context="#stay"         String="&name;:"/>
 
-        <RegExpr          attribute="Nonterminal"   context="#stay"           String="&lt;&name;&gt;"/>
-        <DetectIdentifier attribute="Nonterminal"   context="#stay"           weakDeliminator="-."/>
+        <RegExpr          attribute="Nonterminal"   context="#stay"         String="&lt;&name;&gt;"/>
+        <DetectIdentifier attribute="Nonterminal"   context="#stay"         weakDeliminator="-."/>
 
-        <RegExpr          attribute="Integer"       context="#stay"           String="0|-?[1-9]\d*"/>
+        <RegExpr          attribute="Integer"       context="#stay"         String="0|-?[1-9]\d*"/>
 
-        <Detect2Chars     attribute="Repeater"      context="#stay"           char="(" char1="/"/>
-        <Detect2Chars     attribute="Repeater"      context="#stay"           char="/" char1=")"/>
-        <Detect2Chars     attribute="Repeater"      context="#stay"           char="(" char1=":"/>
-        <Detect2Chars     attribute="Repeater"      context="#stay"           char=":" char1=")"/>
+        <Detect2Chars     attribute="Repeater"      context="#stay"         char="(" char1="/"/>
+        <Detect2Chars     attribute="Repeater"      context="#stay"         char="/" char1=")"/>
+        <Detect2Chars     attribute="Repeater"      context="#stay"         char="(" char1=":"/>
+        <Detect2Chars     attribute="Repeater"      context="#stay"         char=":" char1=")"/>
 
-        <StringDetect     attribute="Copulae"       context="#stay"           String=":=="/>
-        <StringDetect     attribute="Copulae"       context="#stay"           String="::="/>
-        <Detect2Chars     attribute="Copulae"       context="#stay"           char=":" char1="≡"/>
-        <Detect2Chars     attribute="Copulae"       context="#stay"           char=":" char1="="/>
-        <Detect2Chars     attribute="Copulae"       context="#stay"           char=":" char1=":"/>
-        <Detect2Chars     attribute="Copulae"       context="#stay"           char="&lt;" char1="-"/>
-        <Detect2Chars     attribute="Copulae"       context="#stay"           char="&lt;" char1="="/>
-        <Detect2Chars     attribute="Copulae"       context="#stay"           char="-" char1="&gt;"/>
-        <Detect2Chars     attribute="Copulae"       context="#stay"           char="=" char1="&gt;"/>
-        <AnyChar          attribute="Copulae"       context="#stay"           String=":=←→⇐⇒≜"/>
+        <StringDetect     attribute="Copulae"       context="#stay"         String=":=="/>
+        <StringDetect     attribute="Copulae"       context="#stay"         String="::="/>
+        <Detect2Chars     attribute="Copulae"       context="#stay"         char=":" char1="≡"/>
+        <Detect2Chars     attribute="Copulae"       context="#stay"         char=":" char1="="/>
+        <Detect2Chars     attribute="Copulae"       context="#stay"         char=":" char1=":"/>
+        <Detect2Chars     attribute="Copulae"       context="#stay"         char="&lt;" char1="-"/>
+        <Detect2Chars     attribute="Copulae"       context="#stay"         char="&lt;" char1="="/>
+        <Detect2Chars     attribute="Copulae"       context="#stay"         char="-" char1="&gt;"/>
+        <Detect2Chars     attribute="Copulae"       context="#stay"         char="=" char1="&gt;"/>
+        <AnyChar          attribute="Copulae"       context="#stay"         String=":=←→⇐⇒≜"/>
 
-        <Detect2Chars     attribute="Comment"       context="comment block 1" char="(" char1="*" beginRegion="CommentBlock"/>
-        <Detect2Chars     attribute="Comment"       context="comment block 2" char="/" char1="*" beginRegion="CommentBlock"/>
-        <DetectChar       attribute="Comment"       context="comment line"    char="#"/>
+        <DetectChar       attribute="Comment"       context="comment block" char="%" beginRegion="CommentBlock"/>
 
-        <AnyChar          attribute="Combinator"    context="#stay"           String="|/\\-"/>
+        <AnyChar          attribute="Combinator"    context="#stay"         String="|/\\-,"/>
 
-        <AnyChar          attribute="Separator"     context="#stay"           String=",.;"/>
+        <AnyChar          attribute="Terminator"    context="#stay"         String=".;"/>
 
-        <DetectChar       attribute="String"        context="sq-terminal"     char="&apos;"/>
-        <DetectChar       attribute="String"        context="dq-terminal"     char="&quot;"/>
-        <Detect2Chars     attribute="Special"       context="special block"   char="?" char1="?" beginRegion="QBlock"/>
+        <DetectChar       attribute="String"        context="sq-terminal"   char="&apos;"/>
+        <DetectChar       attribute="String"        context="dq-terminal"   char="&quot;"/>
+        <DetectChar       attribute="Special"       context="special block" char="`" beginRegion="QBlock"/>
 
-        <AnyChar          attribute="Operator"      context="#stay"           String="!$%&amp;\*\+?@^~"/>
+        <AnyChar          attribute="Operator"      context="#stay"         String="!#$&amp;\*\+?@^~"/>
 
-        <DetectChar       attribute="Parenthese"    context="#stay"           char="(" beginRegion="PBlock"/>
-        <DetectChar       attribute="Parenthese"    context="#stay"           char=")" endRegion="PBlock"/>
-        <DetectChar       attribute="Parenthese"    context="#stay"           char="&lt;" beginRegion="ABlock"/>
-        <DetectChar       attribute="Parenthese"    context="#stay"           char="&gt;" endRegion="ABlock"/>
-        <DetectChar       attribute="Parenthese"    context="#stay"           char="[" beginRegion="SBlock"/>
-        <DetectChar       attribute="Parenthese"    context="#stay"           char="]" endRegion="SBlock"/>
-        <DetectChar       attribute="Parenthese"    context="#stay"           char="{" beginRegion="CBlock"/>
-        <DetectChar       attribute="Parenthese"    context="#stay"           char="}" endRegion="CBlock"/>
+        <DetectChar       attribute="Parenthese"    context="#stay"         char="(" beginRegion="PBlock"/>
+        <DetectChar       attribute="Parenthese"    context="#stay"         char=")" endRegion="PBlock"/>
+        <DetectChar       attribute="Parenthese"    context="#stay"         char="&lt;" beginRegion="ABlock"/>
+        <DetectChar       attribute="Parenthese"    context="#stay"         char="&gt;" endRegion="ABlock"/>
+        <DetectChar       attribute="Parenthese"    context="#stay"         char="[" beginRegion="SBlock"/>
+        <DetectChar       attribute="Parenthese"    context="#stay"         char="]" endRegion="SBlock"/>
+        <DetectChar       attribute="Parenthese"    context="#stay"         char="{" beginRegion="CBlock"/>
+        <DetectChar       attribute="Parenthese"    context="#stay"         char="}" endRegion="CBlock"/>
       </context>
-      <context attribute="Comment" lineEndContext="#stay" name="comment block 1">
+      <context attribute="Comment" lineEndContext="#stay" name="comment block">
         <DetectSpaces/>
         <IncludeRules context="##Comments"/>
-        <Detect2Chars     attribute="Comment"       context="#pop"            char="*" char1=")" endRegion="CommentBlock"/>
-      </context>
-      <context attribute="Comment" lineEndContext="#stay" name="comment block 2">
-        <DetectSpaces/>
-        <IncludeRules context="##Comments"/>
-        <Detect2Chars     attribute="Comment"       context="#pop"            char="*" char1="/" endRegion="CommentBlock"/>
-      </context>
-      <context attribute="Comment" lineEndContext="#pop" name="comment line">
-        <DetectSpaces/>
-        <IncludeRules context="##Comments"/>
+        <Detect2Chars     attribute="Comment"       context="#stay"         char="\" char1="%"/>
+        <DetectChar       attribute="Comment"       context="#pop"          char="%" endRegion="CommentBlock"/>
       </context>
       <context attribute="String" lineEndContext="#pop" name="sq-terminal">
-        <DetectChar       attribute="String"        context="#pop"            char="&apos;"/>
+        <DetectChar       attribute="String"        context="#pop"          char="&apos;"/>
         <HlCStringChar    attribute="String Char"   context="#stay"/>
-        <RegExpr          attribute="String Char"   context="#stay"           String="&ucode;"/>
+        <RegExpr          attribute="String Char"   context="#stay"         String="&ucode;"/>
       </context>
-      <context attribute="String" lineEndContext="#pop" name="dq-terminal">
-        <DetectChar       attribute="String"        context="#pop"            char="&quot;"/>
+      <context attribute="String" lineEndContext="#stay" name="dq-terminal">
+        <DetectChar       attribute="String"        context="#pop"          char="&quot;"/>
         <HlCStringChar    attribute="String Char"   context="#stay"/>
-        <RegExpr          attribute="String Char"   context="#stay"           String="&ucode;"/>
+        <RegExpr          attribute="String Char"   context="#stay"         String="&ucode;"/>
       </context>
       <context attribute="Special" lineEndContext="#stay" name="special block">
-        <Detect2Chars     attribute="Special Char" context="#stay"           char="\" char1="?"/>
-        <Detect2Chars     attribute="Special"      context="#pop"            char="?" char1="?" endRegion="QBlock"/>
+        <Detect2Chars     attribute="Special Char"  context="#stay"         char="\" char1="`"/>
+        <DetectChar       attribute="Special"       context="#pop"          char="`" endRegion="QBlock"/>
       </context>
     </contexts>
     <itemDatas>
@@ -116,7 +106,7 @@
       <itemData name="Operator"     defStyleNum="dsOperator"  color="#18b218" selColor="#138c13" bold="true"/>
       <itemData name="Parenthese"   defStyleNum="dsRegionMarker"/>
       <itemData name="Repeater"     defStyleNum="dsRegionMarker"/>
-      <itemData name="Separator"    defStyleNum="dsOperator"  bold="true"/>
+      <itemData name="Terminator"   defStyleNum="dsOperator"  bold="true"/>
       <itemData name="Special"      defStyleNum="dsExtension" color="#b2b2b2" backgroundColor="#404040"/>
       <itemData name="Special Char" defStyleNum="dsSpecialChar"               backgroundColor="#404040"/>
       <itemData name="String"       defStyleNum="dsString"/>
@@ -125,9 +115,7 @@
   </highlighting>
   <general>
     <comments>
-      <comment name="singleLine" start="#" position="afterwhitespace"/>
-      <comment name="multiLine"  start="(*" end="*)" region="CommentBlock"/>
-      <comment name="multiLine"  start="/*" end="*/" region="CommentBlock"/>
+      <comment name="multiLine"  start="%" end="%" region="CommentBlock"/>
     </comments>
     <folding indentationsensitive="true"/>
   </general>
