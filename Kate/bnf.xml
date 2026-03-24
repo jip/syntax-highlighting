@@ -18,7 +18,7 @@
 -->
 <language name="BNF/EBNF/ABNF/WBNF"
           section="Sources"
-          version="3"
+          version="4"
           kateversion="5.0"
           extensions="*.bnf;*.ebnf"
           mimetype="text/x-bnf;text/x-ebnf"
@@ -107,8 +107,8 @@
       <itemData name="Parenthese"   defStyleNum="dsRegionMarker"/>
       <itemData name="Repeater"     defStyleNum="dsRegionMarker"/>
       <itemData name="Terminator"   defStyleNum="dsOperator"  bold="true"/>
-      <itemData name="Special"      defStyleNum="dsExtension" color="#b2b2b2" backgroundColor="#404040"/>
-      <itemData name="Special Char" defStyleNum="dsSpecialChar"               backgroundColor="#404040"/>
+      <itemData name="Special"      defStyleNum="dsExtension" color="#444444" backgroundColor="#dddddd"/>
+      <itemData name="Special Char" defStyleNum="dsSpecialChar"               backgroundColor="#dddddd"/>
       <itemData name="String"       defStyleNum="dsString"/>
       <itemData name="String Char"  defStyleNum="dsSpecialChar"/>
     </itemDatas>

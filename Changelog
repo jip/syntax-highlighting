@@ -1,3 +1,16 @@
+2026-03-25
+
+BNF/EBNF/ABNF/WBNF syntax for:
+- Kate, version 4
+- mc, version 3.0.1
+changes:
+- fix special block background color
+- bump version
+- update a demo
+
+tests:
+- test.bnf : drop comment block ["..."]
+
 2026-03-23
 
 J syntax for Kate, version 7
@@ -9,8 +22,10 @@ J syntax for Kate, version 7
 J syntax for mc
 - update a demo
 
-BNF/EBNF/ABNF/WBNF syntax for Kate, version 3 and
-BNF/EBNF/ABNF/WBNF syntax for mc, version 3.0.0 :
+BNF/EBNF/ABNF/WBNF syntax for:
+- Kate, version 3
+- mc, version 3.0.0
+changes:
 - add unary prefix repetition operators (#) and (<n,n>)
 - comma (,) is a combinator not separator
 - change special block region markers

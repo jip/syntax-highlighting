@@ -1,9 +1,3 @@
-[" This is a foldable multi-line comment
-   check regions overlapping priority: Abc -12 \n \x1F \u1a2B 'quoted' \"text\"
-   check no parts of speech are detected: ::= | / \ - ! # $ % & @ ^ ~ * + ? , . ; ( ) [ ] { } < > ` `
-   special labels: BUG DEPRECATED FIXME NOTE TEST TODO WARN
-   A :== B | C | 'foo'  % rule and comment... % [\" ...both inside the comment \"]
-"]
 % This is a foldable multi-line comment
    check regions overlapping priority: Abc -12 \n \x1F \u1a2B 'quoted' \"text\"
    check no parts of speech are detected: ::= | / \ - ! # $ \% & @ ^ ~ * + ? , . ; ( ) [ ] { } < > ` `
