@@ -18,7 +18,7 @@
 -->
 <language name="BNF/EBNF/ABNF/WBNF"
           section="Sources"
-          version="4"
+          version="5"
           kateversion="5.0"
           extensions="*.bnf;*.ebnf"
           mimetype="text/x-bnf;text/x-ebnf"
@@ -33,7 +33,7 @@
         <RegExpr          attribute="Label"         context="#stay"         String="&name;:"/>
 
         <RegExpr          attribute="Nonterminal"   context="#stay"         String="&lt;&name;&gt;"/>
-        <DetectIdentifier attribute="Nonterminal"   context="#stay"         weakDeliminator="-."/>
+        <RegExpr          attribute="Nonterminal"   context="#stay"         String="&name;"/>
 
         <RegExpr          attribute="Integer"       context="#stay"         String="0|-?[1-9]\d*"/>
 
