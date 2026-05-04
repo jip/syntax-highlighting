@@ -31,7 +31,7 @@
 -->
 <language name="J"
           section="Scripts"
-          version="7"
+          version="8"
           kateversion="5.0"
           extensions="*.ijs;*.ijt;*.ijx"
           mimetype="text/x-j;text/x-jsrc"
@@ -73,18 +73,18 @@
         <RegExpr      attribute="Foldable"       context="noun block"   String="(?&lt;![.\w])0\s+:\s*0|\bNote\s*&apos;" beginRegion="DefBlock"/>
         <RegExpr      attribute="Foldable"       context="#stay"        String=":\s*0|\bdefine\b" beginRegion="DefBlock"/>
         <LineContinue attribute="Foldable"       context="#stay"        char=")" endRegion="DefBlock" column="0"/>
-        <Detect2Chars attribute="Foldable"       context="#stay"        char="{" char1="{" beginRegion="DDBlock"/>
-        <Detect2Chars attribute="Foldable"       context="#stay"        char="}" char1="}" endRegion="DDBlock"/>
+        <StringDetect attribute="Foldable"       context="#stay"        String="{{" beginRegion="DDBlock"/>
+        <StringDetect attribute="Foldable"       context="#stay"        String="}}" endRegion="DDBlock"/>
+        <AnyChar      attribute="Parenthese"     context="#stay"        String="()"/>
         <RegExpr      attribute="String"         context="#stay"        String="&apos;([^&apos;]|&apos;&apos;)*&apos;"/>
         <RegExpr      attribute="Adverb"         context="#stay"        String="([/\\]\.|/\.\.|\]:|\b[bfM]\.|[~/\\}])(?![.:])"/>
         <RegExpr      attribute="Verb"           context="#stay"        String="(_?\d:|p\.\.|[AcCeEIjLor]\.|__?:|[/\\iqsuxZ]:|\{::|[=!\]]|[-&lt;&gt;+*%$|,#\{][.:]?|[;\[]:?|[~}&quot;ip][.:]|[?^]\.?|\b[uv](\b|\.))(?![.:])"/>
         <RegExpr      attribute="Number"         context="#stay"        String="&bnum;|&xnum;|&rnum;|&pnum;"/>
-        <AnyChar      attribute="Parenthese"     context="#stay"        String="()"/>
         <RegExpr      attribute="Conjunction"    context="#stay"        String="(&quot;|[:@&amp;][.:]?|;?\.|![.:]|&amp;\.:|[;[\]Hmt]\.|`:?|[LS^]:)(?![.:])"/>
         <keyword      attribute="Control"        context="#stay"        String="controls"/>
         <RegExpr      attribute="Control"        context="#stay"        String="\b(for|goto|label)_&name;\.(?![.:])"/>
-        <Detect2Chars attribute="Copulae Global" context="#stay"        char="=" char1=":"/>
-        <Detect2Chars attribute="Copulae Local"  context="#stay"        char="=" char1="."/>
+        <StringDetect attribute="Copulae Global" context="#stay"        String="=:"/>
+        <StringDetect attribute="Copulae Local"  context="#stay"        String="=."/>
         <RegExpr      attribute="Noun"           context="#stay"        String="\b(a[.:](?![.:])|[mnxy](?![\w.:]))"/>
       </context>
       <context attribute="NounBlock" lineEndContext="#stay" name="noun block">
@@ -93,28 +93,30 @@
       <context attribute="Annotation" lineEndContext="#pop" name="annotation">
         <DetectSpaces/>
         <IncludeRules context="##Comments"/>
+        <DetectIdentifier/>
       </context>
       <context attribute="Comment" lineEndContext="#pop" name="comment line">
         <DetectSpaces/>
         <IncludeRules context="##Comments"/>
+        <DetectIdentifier/>
       </context>
     </contexts>
     <itemDatas>
-      <itemData name="Sentence"       defStyleNum="dsNormal"                                                            />
-      <itemData name="Adverb"         defStyleNum="dsOperator"    color="#18b218" selColor="#138c13" bold="true"        /> <!-- Kate BUG 517160: bold attribute is ignored if this element is placed first within itemDatas -->
-      <itemData name="Annotation"     defStyleNum="dsAnnotation"                                                        />
-      <itemData name="Comment"        defStyleNum="dsComment"     spellChecking="true"                                  />
-      <itemData name="Conjunction"    defStyleNum="dsOperator"    color="#b26818" selColor="#935314" bold="true"        />
-      <itemData name="Control"        defStyleNum="dsControlFlow" color="#ff5454" selColor="#b21818"                    />
-      <itemData name="Copulae Global" defStyleNum="dsBuiltIn"                                                           />
-      <itemData name="Copulae Local"  defStyleNum="dsBuiltIn"                                        bold="false"       />
-      <itemData name="Foldable"       defStyleNum="dsRegionMarker"                                                      />
-      <itemData name="Noun"           defStyleNum="dsKeyword"     color="#1818b2" selColor="#141494"                    />
-      <itemData name="NounBlock"      defStyleNum="dsNormal"      backgroundColor="#e0e9f8" selBackgroundColor="#cdd5e3"/>
-      <itemData name="Number"         defStyleNum="dsDecVal"                                                            />
-      <itemData name="Parenthese"     defStyleNum="dsRegionMarker"                          selBackgroundColor="#cdd5e3"/>
-      <itemData name="String"         defStyleNum="dsString"                                                            />
-      <itemData name="Verb"           defStyleNum="dsOperator"                                       bold="true"        />
+      <itemData name="Sentence"       defStyleNum="dsNormal"        spellChecking="false"/>
+      <itemData name="Adverb"         defStyleNum="dsOperator"      spellChecking="false" bold="true"/> <!-- Kate BUG 517160: bold attribute is ignored if this element is placed first within itemDatas -->
+      <itemData name="Annotation"     defStyleNum="dsAnnotation"    spellChecking="false"/>
+      <itemData name="Comment"        defStyleNum="dsComment"       spellChecking="true"/>
+      <itemData name="Conjunction"    defStyleNum="dsOperator"      spellChecking="false" bold="true"/>
+      <itemData name="Control"        defStyleNum="dsControlFlow"   spellChecking="false"/>
+      <itemData name="Copulae Global" defStyleNum="dsBuiltIn"       spellChecking="false"/>
+      <itemData name="Copulae Local"  defStyleNum="dsBuiltIn"       spellChecking="false" bold="false"/>
+      <itemData name="Foldable"       defStyleNum="dsRegionMarker"  spellChecking="false"/>
+      <itemData name="Noun"           defStyleNum="dsKeyword"       spellChecking="false"/>
+      <itemData name="NounBlock"      defStyleNum="dsNormal"        spellChecking="false"/>
+      <itemData name="Number"         defStyleNum="dsDecVal"        spellChecking="false"/>
+      <itemData name="Parenthese"     defStyleNum="dsRegionMarker"  spellChecking="false"/>
+      <itemData name="String"         defStyleNum="dsString"        spellChecking="false"/>
+      <itemData name="Verb"           defStyleNum="dsOperator"      spellChecking="false" bold="true"/>
     </itemDatas>
   </highlighting>
   <general>
